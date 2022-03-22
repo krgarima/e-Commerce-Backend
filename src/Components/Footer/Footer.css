@@ -1,0 +1,5 @@
+@import url('/src/Pages/Home/Home.css');
+
+.siteInfo {
+    border: 1px solid black;
+}
