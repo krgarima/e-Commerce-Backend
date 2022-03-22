@@ -15,7 +15,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Puzzles",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/prod1.jpg",
   },
   {
     _id: uuid(),
@@ -26,7 +26,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Puzzles",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/prod2.jpg",
   },
   {
     _id: uuid(),
@@ -36,7 +36,7 @@ import { v4 as uuid } from "uuid";
     minAge: "4 years",
     maxAge: "above",
     categoryName: "Puzzles",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/prod3.jpg",
   },
   {
     _id: uuid(),
@@ -46,7 +46,7 @@ import { v4 as uuid } from "uuid";
     minAge: "4 years",
     maxAge: "above",
     categoryName: "Puzzles",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/prod4.jpg",
   },
   {
     _id: uuid(),
@@ -56,7 +56,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "6 years",
     categoryName: "Puzzles",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/prod5.jpg",
   },
   {
     _id: uuid(),
@@ -66,7 +66,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Puzzles",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/prod6.jpg",
   },
   {
     _id: uuid(),
@@ -76,7 +76,7 @@ import { v4 as uuid } from "uuid";
     minAge: "4 years",
     maxAge: "above",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest1.jpg",
   },
   {
     _id: uuid(),
@@ -86,7 +86,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "6 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest1.jpg",
   },
   {
     _id: uuid(),
@@ -96,7 +96,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "6 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest2.jpg",
   },
   {
     _id: uuid(),
@@ -106,7 +106,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest3.jpg",
   },
   {
     _id: uuid(),
@@ -116,7 +116,7 @@ import { v4 as uuid } from "uuid";
     minAge: "3 years",
     maxAge: "10 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest4.jpg",
   },
   {
     _id: uuid(),
@@ -126,7 +126,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest5.jpg",
   },
   {
     _id: uuid(),
@@ -136,7 +136,7 @@ import { v4 as uuid } from "uuid";
     minAge: "4 years",
     maxAge: "above",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest6.jpg",
   },
   {
     _id: uuid(),
@@ -146,7 +146,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "6 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest7.jpg",
   },
   {
     _id: uuid(),
@@ -156,7 +156,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest8.jpg",
   },
   {
     _id: uuid(),
@@ -166,7 +166,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "6 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest9.jpg",
   },
   {
     _id: uuid(),
@@ -176,7 +176,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "6 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest10.jpg",
   },
   {
     _id: uuid(),
@@ -186,7 +186,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "6 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest11.jpg",
   },
   {
     _id: uuid(),
@@ -196,7 +196,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest12.jpg",
   },
   {
     _id: uuid(),
@@ -206,7 +206,7 @@ import { v4 as uuid } from "uuid";
     minAge: "2 years",
     maxAge: "5 years",
     categoryName: "Creative",
-    imgUrl: "/assets/images/bg7.jpg",
+    imgUrl: "/assets/productImages/fest13.jpg",
   },
  
 ];
