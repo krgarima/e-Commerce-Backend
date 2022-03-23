@@ -31,7 +31,10 @@
 .card2 {
     overflow: hidden;
     margin: 1rem;
-    min-height: 30vh;
+    min-height: 30.2vh;
+    border-radius: 4px;
+    width: 27.6vw;
+    padding: 1rem;
 }
 
 .card3 {
@@ -46,4 +49,8 @@ background-color: var(--purple-color);
 
 .order-btn:hover {
     background-color: var(--darkPurple-color);
+}
+
+.removeItem-btn, .moveItem-btn {
+margin: 8px 0 0 4px;
 }
