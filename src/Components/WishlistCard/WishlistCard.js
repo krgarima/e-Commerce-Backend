@@ -3,7 +3,7 @@ import "./WishlistCard.css";
 
 export default function WishlistCard({products}) {
   return (
-    <div className="products-container">
+    <div className="wishlist-container">
 
     {products.map(product=> { 
         return (<li className="list-product" key={product.id}>

@@ -1,103 +1,272 @@
-import React, {useState, useEffect} from 'react';
+import React, { useContext, useReducer } from "react";
 import ProductCard from "../../Components/ProductCard/ProductCard";
-import axios from 'axios';
+import { ProductContext } from "../../Context/product-context";
 import "./ProductListing.css";
 
 export default function ProductListing() {
-
-    const [products, setProducts] = useState([]);
-    const [categories, setCategories] = useState([]);
-  
-    useEffect(() => {
-      (async function getProducts() {
-        try {
-          const { data } = await axios.get("/api/products");
-          setProducts(data.products);
-        }
-       catch(error) {
-          console.log("Couldn't get data. "+error);
-       }
-       
-      })();
-    }, []);
-  
-    useEffect(() => {
-      (async function getCategories() {
-        try {
-          const { data } = await axios.get("/api/categories");
-          setCategories(data.categories);
-        }
-        catch(error) {
-          console.log("Couldn't get data. "+error);
-       }
-       
-      })();
-    }, []);
+  const { products } = useContext(ProductContext);
+  const [state, dispatch] = useReducer(reducer, { filterData: [] });
 
   return (
     <div>
+      <div className="productsContainer">
+        <aside className="filters">
+          <form className="filters">
+            <fieldset className="filter-Clear">
+              <span className="filter-heading">Filters</span>
+              <button
+                className="clearAll"
+                onClick={() =>
+                  dispatch({
+                    type: "default",
+                    payload: {
+                      products: products,
+                    },
+                  })
+                }
+              >
+                Clear
+              </button>
+            </fieldset>
 
-<div className="productsContainer">
-        <aside class="filters">
-                                                <div class="filter-Clear">
-                                                        <span class="filter-heading">Filters</span>
-                                                        <span class="clearAll">Clear</span>
-                                                </div>
-                                                <div class="filter-Price">
-                                                        <div class="filter-heading price-label">Price</div>
-                                                        <input type="range" min="300" max="1000" value="100"
-                                                                class="slider" id="filterRange"/>
-                                                </div>
-                                                <div class="filter-Category">
+            <fieldset className="filter-Price">
+              <div className="filter-heading price-label">Price</div>
+              <input
+                type="range"
+                min="200"
+                max="1100"
+                className="slider"
+                id="filterRange"
+                onChange={(e) =>
+                  dispatch({
+                    type: "PRICE_RANGE",
+                    payload: { value: e.target.value, products: products },
+                  })
+                }
+              />
+            </fieldset>
 
-                                                        <div class="filter-heading">Category</div>
-                                                        <br/>
-                                                        <input type="checkbox" name="puzzles" id="filterPuzzle"/>
-                                                        <label for="filterPuzzle">Puzzles</label>
-                                                        <br/><br/>
-                                                        <input type="checkbox" name="learning" id="filterLearning"/>
-                                                        <label for="filterLearning">Learning</label>
-                                                        <br/><br/>
-                                                        <input type="checkbox" name="creative" id="filterCreative"/>
-                                                        <label for="filterCreative">Creative</label>
-                                                </div>
+            <fieldset className="filter-Category">
+              <legend className="filter-heading">Category</legend>
+              <br />
+              <input
+                type="checkbox"
+                name="puzzles"
+                id="filterPuzzle"
+                value="Puzzles"
+                onChange={(e) =>
+                  dispatch({
+                    type: "FILTER_BY_CATEGORY",
+                    payload: {
+                      value: e.target.value,
+                      checked: e.target.checked,
+                      products:
+                        state.filterData.length === 0
+                          ? products
+                          : [...state.filterData],
+                    },
 
-                                                <div class="filter-Rating">
-                                                        <div class="filter-heading">Rating</div>
-                                                        <br/>
-                                                        <input type="radio" name="fourPlusRating" id="fourPlusRating"/>
-                                                        <label for="fourPlusRating">4 Stars & above</label>
-                                                        <br/><br/>
-                                                        <input type="radio" name="threePlusRating" id="threePlusRating"/>
-                                                        <label for="threePlusRating">3 Stars & above</label>
-                                                        <br/><br/>
-                                                        <input type="radio" name="twoPlusRating" id="twoPlusRating"/>
-                                                        <label for="twoPlusRating">2 Stars & above</label>
-                                                        <br/><br/>
-                                                        <input type="radio" name="onePlusRating" id="onePlusRating"/>
-                                                        <label for="onePlusRating">1 Stars & above</label>
-                                                </div>
-                                                <div class="filter-SortBy">
-                                                        <div class="filter-heading">Sort By</div>
-                                                        <br/>
-                                                        <input type="radio" name="sortLowToHigh" id="sortLowToHigh"/>
-                                                        <label for="sortLowToHigh">Price - Low to High</label>
-                                                        <br/><br/>
-                                                        <input type="radio" name="sortHightToLow" id="sortHightToLow"/>
-                                                        <label for="sortHightToLow">Price - High to Low</label>
-                                                </div>
+                    // payload:
+                    // state.filterData.length === 0
+                    //   ? products
+                    //   : [...state.filterData],
+                  })
+                }
+              />
+              <label htmlFor="filterPuzzle">Puzzles</label>
+              <br />
+
+              <br />
+              <input
+                type="checkbox"
+                name="creative"
+                id="filterCreative"
+                value="Creative"
+                onChange={(e) =>
+                  dispatch({
+                    type: "FILTER_BY_CATEGORY",
+                    payload: {
+                      value: e.target.value,
+                      checked: e.target.checked,
+                      products:
+                        state.filterData.length === 0
+                          ? products
+                          : [...state.filterData],
+                    },
+                  })
+                }
+              />
+              <label htmlFor="filterCreative">Creative</label>
+            </fieldset>
+
+            <fieldset className="filter-Rating">
+              <legend className="filter-heading">Rating</legend>
+              <br />
+              <input
+                type="radio"
+                name="rating"
+                id="fourPlusRating"
+                onChange={() =>
+                  dispatch({
+                    type: "SORT_BY_RATING",
+                    payload: { products: products, value: 4 },
+                  })
+                }
+              />
+              <label htmlFor="fourPlusRating">4 Stars & above</label>
+              <br />
+              <br />
+              <input
+                type="radio"
+                name="rating"
+                id="threePlusRating"
+                onChange={() =>
+                  dispatch({
+                    type: "SORT_BY_RATING",
+                    payload: { products: products, value: 3 },
+                  })
+                }
+              />
+              <label htmlFor="threePlusRating">3 Stars & above</label>
+              <br />
+              <br />
+              <input
+                type="radio"
+                name="rating"
+                id="twoPlusRating"
+                onChange={() =>
+                  dispatch({
+                    type: "SORT_BY_RATING",
+                    payload: { products: products, value: 2 },
+                  })
+                }
+              />
+              <label htmlFor="twoPlusRating">2 Stars & above</label>
+              <br />
+              <br />
+              <input
+                type="radio"
+                name="rating"
+                id="onePlusRating"
+                onChange={() =>
+                  dispatch({
+                    type: "SORT_BY_RATING",
+                    payload: { products: products, value: 1 },
+                  })
+                }
+              />
+              <label htmlFor="onePlusRating">1 Stars & above</label>
+            </fieldset>
+
+            <fieldset className="filter-SortBy">
+              <legend className="filter-heading">Sort By</legend>
+              <br />
+              <input
+                type="radio"
+                id="sortLowToHigh"
+                name="sortByPrice"
+                onChange={() =>
+                  dispatch({
+                    type: "SORT_LOWTOHIGH",
+                    payload:
+                      state.filterData.length === 0
+                        ? products
+                        : [...state.filterData],
+                  })
+                }
+              />
+              <label htmlFor="sortLowToHigh">Price - Low to High</label>
+              <br />
+              <br />
+              <input
+                type="radio"
+                id="sortHightToLow"
+                name="sortByPrice"
+                onChange={() =>
+                  dispatch({
+                    type: "SORT_HIGHTOLOW",
+                    payload:
+                      state.filterData.length === 0
+                        ? products
+                        : [...state.filterData],
+                  })
+                }
+              />
+              <label htmlFor="sortHightToLow">Price - High to Low</label>
+            </fieldset>
+          </form>
         </aside>
 
-        <aside class="allProducts">
-
-            <h1 class="allProducts-heading">All Products</h1>
-            <div class="myProduct">
-
-                <ProductCard products={products}/>
-
-            </div>
+        <aside className="allProducts">
+          <h1 className="allProducts-heading">All Products</h1>
+          <div className="myProduct">
+            {state.filterData.length === 0 ? (
+              <ProductCard products={products} />
+            ) : (
+              <ProductCard products={state.filterData} />
+            )}
+          </div>
         </aside>
-</div>
+      </div>
     </div>
-  )
+  );
 }
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SORT_LOWTOHIGH": {
+      return { ...state, filterData: sortLowToHigh(action.payload) };
+    }
+    case "SORT_HIGHTOLOW": {
+      return { ...state, filterData: sortHighToLow(action.payload) };
+    }
+    case "SORT_BY_RATING": {
+      return { ...state, filterData: fourPlusRatingFn(action.payload) };
+    }
+    case "FILTER_BY_CATEGORY": {
+      return { ...state, filterData: filterByCategory(action.payload) };
+    }
+    case "PRICE_RANGE": {
+      return { ...state, filterData: withinPriceRange(action.payload) };
+    }
+    default:
+      return state;
+  }
+};
+
+const sortLowToHigh = (arr) => {
+  return arr
+    .filter((item) => item.inStock === true)
+    .sort(function (a, b) {
+      return a.price - b.price;
+    });
+};
+
+const sortHighToLow = (arr) => {
+  return arr
+    .filter((item) => item.inStock === true)
+    .sort(function (a, b) {
+      return b.price - a.price;
+    });
+};
+
+const fourPlusRatingFn = (arr) => {
+  const { value, products } = arr;
+  return products
+    .filter((item) => item.inStock === true)
+    .filter((item) => item.rating > value);
+};
+
+const withinPriceRange = (arr) => {
+  const { value, products } = arr;
+  return products.filter((item) => item.price < value);
+};
+
+const filterByCategory = (arr) => {
+  const { value, products, checked } = arr;
+  if (checked)
+    return products
+      .filter((item) => item.inStock === true)
+      .filter((item) => item.categoryName === value);
+  else return products;
+};

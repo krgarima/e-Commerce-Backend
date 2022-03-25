@@ -1,18 +1,17 @@
-.products-container{
-    display: flex;
-flex-wrap: wrap;
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .list-product {
-    list-style: none;
+  list-style: none;
 }
 
-.wish-icon {
-    color: black;
-    width: 3rem;
-    height: 1rem;
+.products-container .wish-icon {
+  color: var(--black-color);
+  width: 3rem;
 }
 
 .wish-icon:hover {
-    color: red;
+  color: var(--red-color);
 }
