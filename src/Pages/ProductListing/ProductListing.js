@@ -2,6 +2,7 @@ import React, { useContext, useReducer } from "react";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { ProductContext } from "../../Context/product-context";
 import "./ProductListing.css";
+import { reducer } from "../../Reducer/filter-reducer";
 
 export default function ProductListing() {
   const { products } = useContext(ProductContext);
@@ -65,11 +66,6 @@ export default function ProductListing() {
                           ? products
                           : [...state.filterData],
                     },
-
-                    // payload:
-                    // state.filterData.length === 0
-                    //   ? products
-                    //   : [...state.filterData],
                   })
                 }
               />
@@ -211,62 +207,3 @@ export default function ProductListing() {
     </div>
   );
 }
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "SORT_LOWTOHIGH": {
-      return { ...state, filterData: sortLowToHigh(action.payload) };
-    }
-    case "SORT_HIGHTOLOW": {
-      return { ...state, filterData: sortHighToLow(action.payload) };
-    }
-    case "SORT_BY_RATING": {
-      return { ...state, filterData: fourPlusRatingFn(action.payload) };
-    }
-    case "FILTER_BY_CATEGORY": {
-      return { ...state, filterData: filterByCategory(action.payload) };
-    }
-    case "PRICE_RANGE": {
-      return { ...state, filterData: withinPriceRange(action.payload) };
-    }
-    default:
-      return state;
-  }
-};
-
-const sortLowToHigh = (arr) => {
-  return arr
-    .filter((item) => item.inStock === true)
-    .sort(function (a, b) {
-      return a.price - b.price;
-    });
-};
-
-const sortHighToLow = (arr) => {
-  return arr
-    .filter((item) => item.inStock === true)
-    .sort(function (a, b) {
-      return b.price - a.price;
-    });
-};
-
-const fourPlusRatingFn = (arr) => {
-  const { value, products } = arr;
-  return products
-    .filter((item) => item.inStock === true)
-    .filter((item) => item.rating > value);
-};
-
-const withinPriceRange = (arr) => {
-  const { value, products } = arr;
-  return products.filter((item) => item.price < value);
-};
-
-const filterByCategory = (arr) => {
-  const { value, products, checked } = arr;
-  if (checked)
-    return products
-      .filter((item) => item.inStock === true)
-      .filter((item) => item.categoryName === value);
-  else return products;
-};
