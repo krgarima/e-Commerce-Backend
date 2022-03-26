@@ -1,7 +1,10 @@
-import React, { useReducer } from "react";
+import React, { useContext } from "react";
 import "./ProductCard.css";
+import { CartContext } from "../../Context/cart-context.js";
 
 export default function ProductCard({ products }) {
+  const { dispatch } = useContext(CartContext);
+
   return (
     <div className="products-container">
       {products.map((product) => {
@@ -32,7 +35,14 @@ export default function ProductCard({ products }) {
                 </p>
               </div>
               <div className="verticalCard-footer">
-                <button className="addItem-btn">Add to Cart</button>
+                <button
+                  className="addItem-btn"
+                  onClick={() =>
+                    dispatch({ type: "ADDED", payload: { product: product } })
+                  }
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </li>
