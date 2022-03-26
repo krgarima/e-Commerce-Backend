@@ -19,6 +19,7 @@ export const products = [
     imgUrl: "/assets/productImages/prod1.jpg",
     rating: 4,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -33,6 +34,7 @@ export const products = [
     imgUrl: "/assets/productImages/prod2.jpg",
     rating: 4.5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -46,6 +48,7 @@ export const products = [
     imgUrl: "/assets/productImages/prod3.jpg",
     rating: 3.5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -59,6 +62,7 @@ export const products = [
     imgUrl: "/assets/productImages/prod4.jpg",
     rating: 3,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -72,6 +76,7 @@ export const products = [
     imgUrl: "/assets/productImages/prod5.jpg",
     rating: 4,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -85,6 +90,7 @@ export const products = [
     imgUrl: "/assets/productImages/prod6.jpg",
     rating: 4,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -98,6 +104,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest1.jpg",
     rating: 5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -111,6 +118,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest1.jpg",
     rating: 3,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -124,6 +132,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest2.jpg",
     rating: 4.5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -137,6 +146,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest3.jpg",
     rating: 4,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -150,6 +160,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest4.jpg",
     rating: 3,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -163,6 +174,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest5.jpg",
     rating: 3.5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -176,6 +188,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest6.jpg",
     rating: 3,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -189,6 +202,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest7.jpg",
     rating: 2.5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -202,6 +216,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest8.jpg",
     rating: 5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -215,6 +230,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest9.jpg",
     rating: 4.5,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -228,6 +244,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest10.jpg",
     rating: 4,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -241,6 +258,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest11.jpg",
     rating: 3,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -254,6 +272,7 @@ export const products = [
     imgUrl: "/assets/productImages/fest12.jpg",
     rating: 3,
     inStock: true,
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -267,5 +286,6 @@ export const products = [
     imgUrl: "/assets/productImages/fest13.jpg",
     rating: 2.5,
     inStock: true,
+    quantity: 1,
   },
 ];
