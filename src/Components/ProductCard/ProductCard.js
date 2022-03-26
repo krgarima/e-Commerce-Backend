@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import "./ProductCard.css";
 import { CartContext } from "../../Context/cart-context.js";
+import { WishlistContext } from "../../Context/wishlist-context";
 
 export default function ProductCard({ products }) {
-  const { dispatch } = useContext(CartContext);
+  const { cart, dispatch } = useContext(CartContext);
+  const { wishlist, wishlistDispatch } = useContext(WishlistContext);
 
   return (
     <div className="products-container">
@@ -11,7 +13,19 @@ export default function ProductCard({ products }) {
         return (
           <li className="list-product" key={product.id}>
             <div className="card1 vertical-Card">
-              <i className="fas fa-heart wish-icon"></i>
+              <i
+                className={
+                  product.isFavorite
+                    ? "fas fa-heart wish-icon markFavorite"
+                    : "fas fa-heart wish-icon"
+                }
+                onClick={() =>
+                  wishlistDispatch({
+                    type: "ADD_TO_WISHLIST",
+                    payload: { product: product },
+                  })
+                }
+              ></i>
               <div className="background-Image">
                 <img className="card-img1" src={product.imgUrl} alt="photo" />
               </div>

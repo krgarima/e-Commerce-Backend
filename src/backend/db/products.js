@@ -20,6 +20,7 @@ export const products = [
     rating: 4,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -35,6 +36,7 @@ export const products = [
     rating: 4.5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -49,6 +51,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -63,6 +66,7 @@ export const products = [
     rating: 3,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -77,6 +81,7 @@ export const products = [
     rating: 4,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -91,6 +96,7 @@ export const products = [
     rating: 4,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -105,6 +111,7 @@ export const products = [
     rating: 5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -119,6 +126,7 @@ export const products = [
     rating: 3,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -133,6 +141,7 @@ export const products = [
     rating: 4.5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -147,6 +156,7 @@ export const products = [
     rating: 4,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -161,6 +171,7 @@ export const products = [
     rating: 3,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -175,6 +186,7 @@ export const products = [
     rating: 3.5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -189,6 +201,7 @@ export const products = [
     rating: 3,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -203,6 +216,7 @@ export const products = [
     rating: 2.5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -217,6 +231,7 @@ export const products = [
     rating: 5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -231,6 +246,7 @@ export const products = [
     rating: 4.5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -245,6 +261,7 @@ export const products = [
     rating: 4,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -259,6 +276,7 @@ export const products = [
     rating: 3,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -273,6 +291,7 @@ export const products = [
     rating: 3,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
   {
     _id: uuid(),
@@ -287,5 +306,6 @@ export const products = [
     rating: 2.5,
     inStock: true,
     quantity: 1,
+    isFavorite: false,
   },
 ];
