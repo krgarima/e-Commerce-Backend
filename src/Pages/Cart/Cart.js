@@ -21,38 +21,40 @@ export default function Cart() {
         <span> ({totalQty})</span>
       </h1>
       <div className="cart-Container center wrap">
-        <CartCard cartList={cart} />
+        <CartCard />
 
-        <div className="card3 text-Card">
-          <div className="card3-title">
-            <h2 className="card-details">Price Details</h2>
-            <hr />
+        {cart.length > 0 && (
+          <div className="card3 text-Card">
+            <div className="card3-title">
+              <h2 className="card-details">Price Details</h2>
+              <hr />
+            </div>
+            <div className="description3">
+              <p className="space">
+                <span>Price:</span>
+                <span>₹ {totalPrice}</span>
+              </p>
+              <p className="space">
+                <span>Quantity:</span>
+                <span>{totalQty}</span>
+              </p>
+              <p className="space">
+                <span>Discount:</span>
+                <span>₹ {totalQty * 100}</span>
+              </p>
+              <hr />
+              <p className="total-price space">
+                <span>TOTAL AMOUNT</span>
+                <span>₹ {totalPrice - totalQty * 100}</span>
+              </p>
+              <hr />
+              <p>You will save ₹ {totalQty * 100} on this order.</p>
+            </div>
+            <div className="txtCard-footer">
+              <button className="order-btn">PLACE ORDER</button>
+            </div>
           </div>
-          <div className="description3">
-            <p className="space">
-              <span>Price:</span>
-              <span>₹ {totalPrice}</span>
-            </p>
-            <p className="space">
-              <span>Quantity:</span>
-              <span>{totalQty}</span>
-            </p>
-            <p className="space">
-              <span>Discount:</span>
-              <span>₹ {totalQty * 100}</span>
-            </p>
-            <hr />
-            <p className="total-price space">
-              <span>TOTAL AMOUNT</span>
-              <span>₹ {totalPrice - totalQty * 100}</span>
-            </p>
-            <hr />
-            <p>You will save ₹ {totalQty * 100} on this order.</p>
-          </div>
-          <div className="txtCard-footer">
-            <button className="order-btn">PLACE ORDER</button>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

@@ -1,56 +1,63 @@
-@import url('/src/index.css');
+@import url("/src/index.css");
 
 .cart {
-    margin-top: 8.5vh;
-    min-height: 82vh;
-    width: 98.8vw;
-    background-color: var(--background-color2);
+  margin-top: 8.5vh;
+  min-height: 82vh;
+  width: 98.8vw;
+  background-color: var(--background-color2);
 }
 
 .cart-Heading {
-    font-size: 3rem;
-    font-weight: 600;
-    padding: 6rem auto;
-    display: flex;
-    justify-content: center;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 6rem auto;
+  display: flex;
+  justify-content: center;
 }
 
 .cart-Heading span {
-    margin-top: 5vh;
+  margin-top: 5vh;
 }
 
 .cart-Container {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .card-img2 {
-    overflow: hidden;
-    height: 1vh;
+  overflow: hidden;
+  height: 1vh;
 }
 
 .card2 {
-    overflow: hidden;
-    margin: 1rem;
-    min-height: 30.2vh;
-    border-radius: 4px;
-    width: 27.6vw;
-    padding: 1rem;
+  overflow: hidden;
+  margin: 1rem;
+  min-height: 30.2vh;
+  border-radius: 4px;
+  width: 27.6vw;
+  padding: 1rem;
 }
 
 .card3 {
-    min-height: 30vh;
+  min-height: 30vh;
 }
 
 /******** addition ********/
 
 .order-btn {
-background-color: var(--purple-color);
+  background-color: var(--purple-color);
 }
 
 .order-btn:hover {
-    background-color: var(--darkPurple-color);
+  background-color: var(--darkPurple-color);
 }
 
-.removeItem-btn, .moveItem-btn {
-margin: 8px 0 0 4px;
+.removeItem-btn,
+.moveItem-btn {
+  margin: 8px 0 0 4px;
+}
+
+@media only screen and (max-width: 800px) {
+  .card2 {
+    width: 80vw;
+  }
 }

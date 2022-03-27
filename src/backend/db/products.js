@@ -21,6 +21,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -37,6 +38,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -52,6 +54,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -67,6 +70,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: true,
   },
   {
     _id: uuid(),
@@ -82,6 +86,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: true,
   },
   {
     _id: uuid(),
@@ -97,6 +102,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -112,6 +118,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: true,
   },
   {
     _id: uuid(),
@@ -127,6 +134,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -142,6 +150,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: true,
   },
   {
     _id: uuid(),
@@ -157,6 +166,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -172,6 +182,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -187,6 +198,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -202,6 +214,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -217,6 +230,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -232,6 +246,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -247,6 +262,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -262,6 +278,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -277,6 +294,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -292,6 +310,7 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
   {
     _id: uuid(),
@@ -307,5 +326,6 @@ export const products = [
     inStock: true,
     quantity: 1,
     isFavorite: false,
+    isBestSeller: false,
   },
 ];

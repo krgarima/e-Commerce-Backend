@@ -6,32 +6,39 @@ import { WishlistContext } from "../../Context/wishlist-context";
 
 export default function NavBar() {
   const { cart } = useContext(CartContext);
-  const { wishlist, wishlistDispatch } = useContext(WishlistContext);
+  const { wishlist } = useContext(WishlistContext);
 
   return (
     <div>
-      <div class="body__heading space-between">
-        <div class="left">
+      <div className="body__heading space-between">
+        <div className="left">
           <i
-            class="fas fa-bars fa-2x  hamburgerMenuDismissible"
+            className="fas fa-bars fa-2x  hamburgerMenuDismissible"
             id="hamburgerMenuModal1"
           ></i>
-          <h3 class="third-heading company-logo">
-            <Link to="/">Blackmole</Link>
+          <h3 className="third-heading company-logo">
+            <Link to="/">
+              <img
+                src="/assets/images/logo.png"
+                alt="Blackmole"
+                srcset=""
+                className="Blackmole-logo"
+              />
+            </Link>
           </h3>
         </div>
-        <div class="navIcons">
-          <div class="icon-Badge center">
+        <div className="navIcons">
+          <div className="icon-Badge center">
             <Link to="/Wishlist">
               <i className="fas fa-2x fa-heart"></i>
-              <div class="badge btn-badge">{wishlist.length}</div>
+              <div className="badge btn-badge">{wishlist.length}</div>
             </Link>
           </div>
 
-          <div class="icon-Badge center">
+          <div className="icon-Badge center">
             <Link to="/myCart">
               <i className="fas fa-2x fa-shopping-cart" target="_blank"></i>
-              <div class="badge btn-badge">
+              <div className="badge btn-badge">
                 {cart.reduce((acc, value) => acc + value.quantity, 0)}
               </div>
             </Link>

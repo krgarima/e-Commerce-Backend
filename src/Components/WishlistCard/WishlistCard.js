@@ -64,6 +64,12 @@ export default function WishlistCard() {
           </li>
         );
       })}
+      {wishlist.length === 0 && (
+        <iframe
+          className="empty-gif"
+          src="https://giphy.com/embed/THCGaeGUPBbqjeLqlE"
+        ></iframe>
+      )}
     </div>
   );
 }
