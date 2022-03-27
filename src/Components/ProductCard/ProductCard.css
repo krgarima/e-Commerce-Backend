@@ -7,11 +7,15 @@
   list-style: none;
 }
 
-.products-container .wish-icon {
+.wish-icon {
   color: var(--black-color);
   width: 3rem;
 }
 
 .wish-icon:hover {
+  color: var(--red-color);
+}
+
+.markFavorite {
   color: var(--red-color);
 }
