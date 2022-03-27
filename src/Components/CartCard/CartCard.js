@@ -3,13 +3,13 @@ import "./CartCard.css";
 import { CartContext } from "../../Context/cart-context.js";
 import { WishlistContext } from "../../Context/wishlist-context";
 
-export default function CartCard({ cartList }) {
+export default function CartCard() {
   const { cart, dispatch } = useContext(CartContext);
   const { wishlist, wishlistDispatch } = useContext(WishlistContext);
 
   return (
     <div className="wishlist-container">
-      {cartList.map((product) => {
+      {cart.map((product) => {
         return (
           <li className="list-product" key={product.id}>
             <div className="card2 horizontal-Card">

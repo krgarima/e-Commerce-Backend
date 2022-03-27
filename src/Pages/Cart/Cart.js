@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import "./Cart.css";
+
 import CartCard from "../../Components/CartCard/CartCard";
 import { CartContext } from "../../Context/cart-context";
 
@@ -20,7 +21,7 @@ export default function Cart() {
         <span> ({totalQty})</span>
       </h1>
       <div className="cart-Container center wrap">
-        <CartCard cartList={cart} />
+        <CartCard />
 
         {cart.length > 0 && (
           <div className="card3 text-Card">

@@ -5,22 +5,22 @@ export default function BestSeller() {
   const { products } = useContext(ProductContext);
   return (
     <div className="products-container">
-      {products.map((product) => {
+      {products.map(({ id, title, price, discount, imgUrl, isBestSeller }) => {
         return (
-          <li className="list-product" key={product.id}>
-            {product.isBestSeller === true && (
+          <li className="list-product" key={id}>
+            {isBestSeller === true && (
               <div class="card1 vertical-Card">
                 <div class="background-Image">
-                  <img class="card-img1" src={product.imgUrl} alt="photo" />
+                  <img class="card-img1" src={imgUrl} alt="photo" />
                 </div>
                 <div class="card-title">
-                  <h2>{product.title}</h2>
+                  <h2>{title}</h2>
                 </div>
                 <div class="description1">
                   <p class="item-price">
-                    {product.price}
+                    {price}
                     <strike>₹ 700</strike>
-                    <span class="discount">({product.discount})</span>
+                    <span class="discount">({discount})</span>
                   </p>
                 </div>
               </div>
