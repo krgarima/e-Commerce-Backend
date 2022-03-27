@@ -1,26 +1,30 @@
 /********** addition ***********/
 
 .navIcons {
-    width: 18rem;
-    display: flex;
-    justify-content: space-evenly;
+  width: 18rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .btn-badge {
-left: 1.8rem;
+  left: 1.8rem;
 }
 
 .log:hover {
-    border: none;
-    color: var(--purple-color);
+  border: none;
+  color: var(--purple-color);
 }
 
 .log a {
-    color: var(--purple-color)
+  color: var(--purple-color);
 }
 
 .company-logo {
-    color: var(--white-color);
-    font-style: italic;
-    font-weight: 600;
+  color: var(--white-color);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.Blackmole-logo {
+  height: 4rem;
 }

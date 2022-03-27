@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import "./CartCard.css";
 import { CartContext } from "../../Context/cart-context.js";
+import { WishlistContext } from "../../Context/wishlist-context";
 
 export default function CartCard({ cartList }) {
-  const { dispatch } = useContext(CartContext);
+  const { cart, dispatch } = useContext(CartContext);
+  const { wishlist, wishlistDispatch } = useContext(WishlistContext);
 
   return (
     <div className="wishlist-container">
@@ -47,7 +49,15 @@ export default function CartCard({ cartList }) {
                   >
                     Remove from Cart
                   </button>
-                  <button className="horizontal-btn moveItem-btn">
+                  <button
+                    className="horizontal-btn moveItem-btn"
+                    onClick={() =>
+                      wishlistDispatch({
+                        type: "ADD_TO_WISHLIST",
+                        payload: { product: product },
+                      })
+                    }
+                  >
                     Move to Wishlist
                   </button>
                 </div>
@@ -56,6 +66,13 @@ export default function CartCard({ cartList }) {
           </li>
         );
       })}
+
+      {cart.length === 0 && (
+        <iframe
+          className="empty-gif"
+          src="https://giphy.com/embed/THCGaeGUPBbqjeLqlE"
+        ></iframe>
+      )}
     </div>
   );
 }

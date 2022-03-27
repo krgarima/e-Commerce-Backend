@@ -4,7 +4,7 @@ import "./Wishlist.css";
 import { WishlistContext } from "../../Context/wishlist-context";
 
 export default function Wishlist() {
-  const { wishlist, wishlistDispatch } = useContext(WishlistContext);
+  const { wishlist } = useContext(WishlistContext);
   return (
     <div>
       <div class="allWishlistProducts">
