@@ -29,6 +29,22 @@ function App() {
             path="/Wishlist"
             element={privateRoute ? <Wishlist /> : <Login />}
           />
+          <Route
+            path="*"
+            element={
+              <main
+                style={{
+                  padding: "1rem",
+                  backgroundColor: "var(--background-color)",
+                }}
+              >
+                <p className="error404">404 Page Not Found!</p>
+                <p className="error404-msg">
+                  Oops!! Looks like you have entered a wrong URL
+                </p>
+              </main>
+            }
+          />
         </Routes>
       </main>
       <Footer />
