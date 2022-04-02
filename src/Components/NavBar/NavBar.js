@@ -36,7 +36,7 @@ export default function NavBar() {
           </div>
 
           <div className="icon-Badge center">
-            <Link to="/myCart">
+            <Link to="/Cart">
               <i className="fas fa-2x fa-shopping-cart" target="_blank"></i>
               <div className="badge btn-badge">
                 {cart.reduce((acc, value) => acc + value.quantity, 0)}

@@ -11,7 +11,7 @@ export default function cartReducer(state, action) {
         return [...state, action.payload.product];
       }
     }
-    case "REDUCE": {
+    case "REDUCE-QTY": {
       if (
         state.some(
           (cartItem) =>

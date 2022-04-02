@@ -35,7 +35,7 @@ export default function CartCard() {
                         className="btn-changeQty"
                         onClick={() =>
                           dispatch({
-                            type: "REDUCE",
+                            type: "REDUCE-QTY",
                             payload: { product: product },
                           })
                         }

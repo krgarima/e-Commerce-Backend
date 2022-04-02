@@ -24,7 +24,7 @@ function App() {
           <Route path="/ProductListing" element={<ProductListing />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/myCart" element={privateRoute ? <Cart /> : <Login />} />
+          <Route path="/Cart" element={privateRoute ? <Cart /> : <Login />} />
           <Route
             path="/Wishlist"
             element={privateRoute ? <Wishlist /> : <Login />}

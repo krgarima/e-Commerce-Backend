@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import "./Cart.css";
 
 import CartCard from "../../Components/CartCard/CartCard";

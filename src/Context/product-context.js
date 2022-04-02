@@ -5,7 +5,7 @@ const ProductContext = createContext();
 
 const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [setCategories] = useState([]);
 
   useEffect(() => {
     (async function getProducts() {
@@ -37,7 +37,5 @@ const ProductContextProvider = ({ children }) => {
     </div>
   );
 };
-
-// const useProduct = () => useContext(ProductContext);
 
 export { ProductContext, ProductContextProvider };

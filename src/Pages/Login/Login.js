@@ -87,7 +87,7 @@ export default function Login() {
             Add Dummy username & password
           </button>
           <button className="signup-btns toSignUpPage-btn">
-            <Link to="/SignUp">Create New Account &gt;</Link>
+            <Link to="/SignUp">Create a New Account &gt;</Link>
           </button>
         </form>
       </div>
