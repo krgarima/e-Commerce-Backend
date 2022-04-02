@@ -16,10 +16,6 @@ export default function NavBar() {
     <div>
       <div className="body__heading space-between">
         <div className="left">
-          <i
-            className="fas fa-bars fa-2x  hamburgerMenuDismissible"
-            id="hamburgerMenuModal1"
-          ></i>
           <h3 className="third-heading company-logo">
             <Link to="/">
               <img
@@ -29,6 +25,7 @@ export default function NavBar() {
               />
             </Link>
           </h3>
+          <i className="fas fa-2x  fa-search"></i>
         </div>
         <div className="navIcons">
           <div className="icon-Badge center">
