@@ -9,8 +9,11 @@ import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
 import Cart from "./Pages/Cart/Cart";
 import Wishlist from "./Pages/Wishlist/Wishlist";
+import { PrivateRouteContext } from "./Context/privateRoute-context";
+import React, { useContext } from "react";
 
 function App() {
+  const { privateRoute, setPrivateRoute } = useContext(PrivateRouteContext);
   return (
     <div className="App">
       <NavBar />
@@ -21,8 +24,11 @@ function App() {
           <Route path="/ProductListing" element={<ProductListing />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/myCart" element={<Cart />} />
-          <Route path="/Wishlist" element={<Wishlist />} />
+          <Route path="/myCart" element={privateRoute ? <Cart /> : <Login />} />
+          <Route
+            path="/Wishlist"
+            element={privateRoute ? <Wishlist /> : <Login />}
+          />
         </Routes>
       </main>
       <Footer />

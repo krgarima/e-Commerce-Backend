@@ -7,11 +7,11 @@ export default function Wishlist() {
   const { wishlist } = useContext(WishlistContext);
   return (
     <div>
-      <div class="allWishlistProducts">
-        <h1 class="wishlist-Products-heading">
+      <div className="allWishlistProducts">
+        <h1 className="wishlist-Products-heading">
           My Wishlist ({wishlist.length})
         </h1>
-        <div class="myProduct">
+        <div className="myProduct">
           <WishlistCard products={Wishlist} />
         </div>
       </div>

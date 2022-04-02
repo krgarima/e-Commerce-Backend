@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { CartContext } from "../../Context/cart-context.js";
 import { WishlistContext } from "../../Context/wishlist-context";
+import { AuthContext } from "../../Context/auth-context";
+import { PrivateRouteContext } from "../../Context/privateRoute-context";
 
 export default function NavBar() {
   const { cart } = useContext(CartContext);
   const { wishlist } = useContext(WishlistContext);
+  const { logged, setLogged } = useContext(AuthContext);
+  const { setPrivateRoute } = useContext(PrivateRouteContext);
 
   return (
     <div>
@@ -21,7 +25,6 @@ export default function NavBar() {
               <img
                 src="/assets/images/logo.png"
                 alt="Blackmole"
-                srcset=""
                 className="Blackmole-logo"
               />
             </Link>
@@ -44,8 +47,20 @@ export default function NavBar() {
             </Link>
           </div>
 
-          <button className="log">
-            <Link to="/Login">Log In</Link>
+          <button
+            className="log"
+            onClick={() => {
+              if (logged) {
+                setLogged(false);
+                setPrivateRoute(false);
+              }
+            }}
+          >
+            {logged ? (
+              <Link to="/Login">Log Out</Link>
+            ) : (
+              <Link to="/Login">Log In</Link>
+            )}
           </button>
         </div>
       </div>
