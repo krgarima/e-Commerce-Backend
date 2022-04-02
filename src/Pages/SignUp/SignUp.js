@@ -70,11 +70,8 @@ export default function SignUp() {
             </label>
           </div>
           <br />
-          <button
-            className="signup-btns createNewAccount-btn"
-            onClick={signHandler}
-          >
-            Generate Token
+          <button className="signup-btns createNewAccount-btn">
+            Create my New Account
           </button>
           <br />
           <button className="signup-btns toLoginPage-btn">
