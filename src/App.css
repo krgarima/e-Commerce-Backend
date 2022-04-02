@@ -215,4 +215,13 @@ strike {
     top: 18vh;
     left: 40vw;
   }
+
+  .error404 {
+    margin: 40rem 0 31rem 2rem;
+  }
+
+  .error404-msg {
+    font-size: 2rem;
+    margin: 1rem 0rem 8rem 0rem;
+  }
 }
