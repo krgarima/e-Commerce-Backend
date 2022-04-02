@@ -39,7 +39,6 @@ export default function Home() {
                   className="image-puzzle"
                   src="/assets/images/puzzlesImg.jpg"
                   alt="puzzle"
-                  srcset=""
                 />
                 <div className="category-puzzle">Puzzles</div>
               </span>
@@ -48,7 +47,6 @@ export default function Home() {
                   className="image-creative"
                   src="/assets/images/christmas.jpg"
                   alt="Christmas-decoration"
-                  srcset=""
                 />
                 <div className="category-creative">Creative</div>
               </span>
@@ -61,19 +59,16 @@ export default function Home() {
               className="image-skills"
               src="/assets/images/emotionalSkills.jpg"
               alt="Emotional Skills"
-              srcset=""
             />
             <img
               className="image-skills"
               src="/assets/images/cognitiveSkills.jpg"
               alt="Cognitive Skills"
-              srcset=""
             />
             <img
               className="image-skills"
               src="/assets/images/physicalSkills.jpg"
               alt="Physical Skills"
-              srcset=""
             />
           </div>
 
@@ -83,7 +78,6 @@ export default function Home() {
               className="about-company"
               src="/assets/images/about.jpg"
               alt="Emotional Skills"
-              srcset=""
             />
           </div>
         </div>

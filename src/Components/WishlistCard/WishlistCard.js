@@ -5,7 +5,7 @@ import { CartContext } from "../../Context/cart-context.js";
 
 export default function WishlistCard() {
   const { wishlist, wishlistDispatch } = useContext(WishlistContext);
-  const { cart, dispatch } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
 
   return (
     <div className="wishlist-container">

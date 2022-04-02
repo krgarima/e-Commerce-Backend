@@ -1,107 +1,108 @@
-@import url('/src/index.css');
+@import url("/src/index.css");
 
 /********* login *********/
 
 .forgotPswd {
-    color: var(--darkBlue-color);
-    margin-left: 1.2rem;
+  color: var(--darkBlue-color);
+  margin-left: 1.2rem;
 }
 
 /******* sign up ********/
 
 .SignUp {
-    margin-top: 8.5vh;
-    min-height: 82vh;
-    width: 98.6vw;
-    font-size: 1.3rem;
-    background-color: var(--background-color2);
+  margin-top: 8.5vh;
+  min-height: 82vh;
+  width: 98.6vw;
+  font-size: 1.3rem;
+  background-color: var(--background-color2);
 }
 
 .signUp-heading {
-    font-size: 3.5vh;
-    font-weight: 600;
-    margin: 1.5rem 0 2rem 0;
+  font-size: 3.5vh;
+  font-weight: 600;
+  margin: 1.5rem 0 2rem 0;
 }
 
 .signUp-Container {
-    width: 25vw;
-    height: 60vh;
-    background-color: var(--white-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
+  width: 25vw;
+  height: 60vh;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
 }
 
 .signup-contents {
-    width: 18vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  width: 18vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .signup-contents input {
-    height: 3.5vh;
+  height: 4vh;
 }
 
 .userAgreement {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
-.signup-contents label{
-    font-weight: 600;
+.signup-contents label {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .check {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .signup-btns {
-    border: none;
-    width: 85%;
-    padding: 6px;
-    margin: 0 2vw;
+  border: none;
+  width: 85%;
+  padding: 6px;
+  margin: 0 2vw;
 }
 
 .createNewAccount-btn {
-    background-color: var(--purple-color);
-    color: var(--white-color);
+  background-color: var(--purple-color);
+  color: var(--white-color);
 }
 
 .createNewAccount-btn:hover {
-    background-color: var(--darkPurple-color);
-    color: var(--white-color);
+  background-color: var(--darkPurple-color);
+  color: var(--white-color);
 }
 
-.toLoginPage-btn {
-    background-color: var(--white-color);
+.toSignUpPage-btn {
+  background-color: var(--white-color);
 }
 
-.toLoginPage-btn:hover {
-    border: 2px solid var(--deepPurple-color);
-    border-radius: 2px;
+.toSignUpPage-btn:hover {
+  border: 2px solid var(--deepPurple-color);
+  border-radius: 2px;
 }
 
 /********** mobile mode *********/
 
 @media only screen and (max-width: 800px) {
-    .signUp-Container {
-        width: 40vw;
-    }
+  .signUp-Container {
+    width: 40vw;
+  }
 
-     .signup-contents {
-            width: 36vw;
-}
+  .signup-contents {
+    width: 36vw;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .signUp-Container {
-        width: 80vw;
-    }
+  .signUp-Container {
+    width: 80vw;
+  }
 
-     .signup-contents {
-            width: 60vw;
-}
+  .signup-contents {
+    width: 60vw;
+  }
 }

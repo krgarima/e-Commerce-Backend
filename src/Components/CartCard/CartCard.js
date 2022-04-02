@@ -5,7 +5,7 @@ import { WishlistContext } from "../../Context/wishlist-context";
 
 export default function CartCard() {
   const { cart, dispatch } = useContext(CartContext);
-  const { wishlist, wishlistDispatch } = useContext(WishlistContext);
+  const { wishlistDispatch } = useContext(WishlistContext);
 
   return (
     <div className="wishlist-container">
@@ -15,7 +15,11 @@ export default function CartCard() {
             <div className="card2 horizontal-Card">
               <aside className="float-cardLeft">
                 <div className="background-Image">
-                  <img className="card-img2" src={product.imgUrl} alt="photo" />
+                  <img
+                    className="card-img2"
+                    src={product.imgUrl}
+                    alt="productImg"
+                  />
                 </div>
               </aside>
               <aside>
@@ -25,16 +29,36 @@ export default function CartCard() {
                 <div className="description1">
                   <p className="item-price">₹ {product.price}</p>
                   <p>
-                    <label htmlFor="quantity">Quantity:</label>
-                    <input
-                      className="itemQuantity"
-                      type="number"
-                      id="quantity"
-                      name="quantity"
-                      min="1"
-                      max="5"
-                      value={product.quantity}
-                    />
+                    <label htmlFor="quantity">
+                      Quantity:{" "}
+                      <button
+                        className="btn-changeQty"
+                        onClick={() =>
+                          dispatch({
+                            type: "REDUCE-QTY",
+                            payload: { product: product },
+                          })
+                        }
+                      >
+                        {product.quantity === 1 ? (
+                          <i class="fas fa-trash"></i>
+                        ) : (
+                          "-"
+                        )}
+                      </button>
+                      {product.quantity}
+                      <button
+                        className="btn-changeQty"
+                        onClick={() =>
+                          dispatch({
+                            type: "ADDED",
+                            payload: { product: product },
+                          })
+                        }
+                      >
+                        +
+                      </button>
+                    </label>
                   </p>
                 </div>
                 <div className="horizontalCard-footer">
@@ -42,7 +66,7 @@ export default function CartCard() {
                     className="horizontal-btn removeItem-btn"
                     onClick={() =>
                       dispatch({
-                        type: "REMOVED",
+                        type: "DELETED",
                         payload: { product: product },
                       })
                     }

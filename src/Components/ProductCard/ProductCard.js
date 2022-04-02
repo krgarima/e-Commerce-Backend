@@ -4,8 +4,8 @@ import { CartContext } from "../../Context/cart-context.js";
 import { WishlistContext } from "../../Context/wishlist-context";
 
 export default function ProductCard({ products }) {
-  const { cart, dispatch } = useContext(CartContext);
-  const { wishlist, wishlistDispatch } = useContext(WishlistContext);
+  const { dispatch } = useContext(CartContext);
+  const { wishlistDispatch } = useContext(WishlistContext);
 
   return (
     <div className="products-container">
@@ -27,7 +27,11 @@ export default function ProductCard({ products }) {
                 }
               ></i>
               <div className="background-Image">
-                <img className="card-img1" src={product.imgUrl} alt="photo" />
+                <img
+                  className="card-img1"
+                  src={product.imgUrl}
+                  alt="card-photo"
+                />
               </div>
               <div className="card-title">
                 <h2>{product.title}</h2>
@@ -51,9 +55,9 @@ export default function ProductCard({ products }) {
               <div className="verticalCard-footer">
                 <button
                   className="addItem-btn"
-                  onClick={() =>
-                    dispatch({ type: "ADDED", payload: { product: product } })
-                  }
+                  onClick={() => {
+                    dispatch({ type: "ADDED", payload: { product: product } });
+                  }}
                 >
                   Add to Cart
                 </button>

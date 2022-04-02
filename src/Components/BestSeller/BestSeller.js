@@ -9,18 +9,22 @@ export default function BestSeller() {
         return (
           <li className="list-product" key={id}>
             {isBestSeller === true && (
-              <div class="card1 vertical-Card">
-                <div class="background-Image">
-                  <img class="card-img1" src={imgUrl} alt="photo" />
+              <div className="card1 vertical-Card">
+                <div className="background-Image">
+                  <img
+                    className="card-img1"
+                    src={imgUrl}
+                    alt="bestSellerPhoto"
+                  />
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h2>{title}</h2>
                 </div>
-                <div class="description1">
-                  <p class="item-price">
+                <div className="description1">
+                  <p className="item-price">
                     {price}
                     <strike>₹ 700</strike>
-                    <span class="discount">({discount})</span>
+                    <span className="discount">({discount})</span>
                   </p>
                 </div>
               </div>

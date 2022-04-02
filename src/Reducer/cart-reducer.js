@@ -11,7 +11,7 @@ export default function cartReducer(state, action) {
         return [...state, action.payload.product];
       }
     }
-    case "REMOVED": {
+    case "REDUCE-QTY": {
       if (
         state.some(
           (cartItem) =>
@@ -33,6 +33,9 @@ export default function cartReducer(state, action) {
       } else {
         return state;
       }
+    }
+    case "DELETED": {
+      return state.filter((itm) => itm.id !== action.payload.product.id);
     }
     default:
       return state;
