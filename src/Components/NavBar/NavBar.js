@@ -4,13 +4,12 @@ import "./NavBar.css";
 import { CartContext } from "../../Context/cart-context.js";
 import { WishlistContext } from "../../Context/wishlist-context";
 import { AuthContext } from "../../Context/auth-context";
-import { PrivateRouteContext } from "../../Context/privateRoute-context";
 
 export default function NavBar() {
+  const encodedToken = localStorage.getItem("token");
   const { cart } = useContext(CartContext);
   const { wishlist } = useContext(WishlistContext);
-  const { logged, setLogged } = useContext(AuthContext);
-  const { setPrivateRoute } = useContext(PrivateRouteContext);
+  const { setLogged } = useContext(AuthContext);
 
   return (
     <div>
@@ -25,7 +24,10 @@ export default function NavBar() {
               />
             </Link>
           </h3>
-          <i className="fas fa-2x  fa-search"></i>
+
+          <Link to="/Search">
+            <i className="fas fa-2x fa-search"></i>
+          </Link>
         </div>
         <div className="navIcons">
           <div className="icon-Badge center">
@@ -47,13 +49,13 @@ export default function NavBar() {
           <button
             className="log"
             onClick={() => {
-              if (logged) {
+              if (encodedToken) {
                 setLogged(false);
-                setPrivateRoute(false);
+                localStorage.removeItem("token");
               }
             }}
           >
-            {logged ? (
+            {encodedToken ? (
               <Link to="/Login">Log Out</Link>
             ) : (
               <Link to="/Login">Log In</Link>

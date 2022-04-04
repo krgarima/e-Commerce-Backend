@@ -29,3 +29,7 @@
 .Blackmole-logo {
   height: 4rem;
 }
+
+.fa-search {
+  color: var(--white-color);
+}

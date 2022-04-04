@@ -1,41 +1,52 @@
 import React, { useContext } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { PrivateRouteContext } from "../../Context/privateRoute-context";
 import { AuthContext } from "../../Context/auth-context";
 
 export default function Login() {
   const navigate = useNavigate();
   const { userName, setUserName, password, setPassword, setLogged } =
     useContext(AuthContext);
-  const { privateRoute, setPrivateRoute } = useContext(PrivateRouteContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    if (userName === "adarshbalika@neog.camp" && password === "password") {
-      setPrivateRoute(true);
+    const encodedToken = localStorage.getItem("token");
+    if (
+      encodedToken &&
+      userName === "adarshbalika@neog.camp" &&
+      password === "password"
+    ) {
       setLogged(true);
       navigate("/ProductListing");
     } else {
-      setPrivateRoute(false);
       setLogged(false);
       setUserName("");
       setPassword("");
     }
   };
 
-  const setDummyData = (e) => {
+  const setDummyData = async (e) => {
     e.preventDefault();
     setUserName("adarshbalika@neog.camp");
     setPassword("password");
+
+    try {
+      const response = await axios.post(`/api/auth/signup`, {
+        firstName: "Adarsh",
+        lastName: "Balika",
+        email: "adarshbalika@neog.camp",
+        password: "adarshBalika",
+      });
+      localStorage.setItem("token", response.data.encodedToken);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div className="SignUp center">
-      {console.log(privateRoute)}
       <div className="signUp-Container">
         <h1 className="signUp-heading">Login</h1>
         <form className="signup-contents">
