@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
-import "./WishlistCard.css";
-import { WishlistContext } from "../../Context/wishlist-context";
-import { CartContext } from "../../Context/cart-context.js";
-
+import { CartContext, WishlistContext } from "../../Context/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./WishlistCard.css";
 
 export default function WishlistCard() {
   const { wishlist, wishlistDispatch } = useContext(WishlistContext);

@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext, WishlistContext, AuthContext } from "../../Context/index";
 import "./NavBar.css";
-import { CartContext } from "../../Context/cart-context.js";
-import { WishlistContext } from "../../Context/wishlist-context";
-import { AuthContext } from "../../Context/auth-context";
 
 export default function NavBar() {
   const encodedToken = localStorage.getItem("token");

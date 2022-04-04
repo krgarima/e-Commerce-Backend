@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import "./CartCard.css";
-import { CartContext } from "../../Context/cart-context.js";
-import { WishlistContext } from "../../Context/wishlist-context";
+import { CartContext, WishlistContext } from "../../Context/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./CartCard.css";
 
 export default function CartCard() {
   const { cart, dispatch } = useContext(CartContext);

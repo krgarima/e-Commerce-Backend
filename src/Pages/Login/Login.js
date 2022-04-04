@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import "./Login.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/auth-context";
+import "./Login.css";
 
 export default function Login() {
   const navigate = useNavigate();

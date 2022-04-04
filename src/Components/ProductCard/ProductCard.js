@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
+import { CartContext, WishlistContext } from "../../Context/index";
 import "./ProductCard.css";
-import { CartContext } from "../../Context/cart-context.js";
-import { WishlistContext } from "../../Context/wishlist-context";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
