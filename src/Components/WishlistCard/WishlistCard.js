@@ -3,9 +3,23 @@ import "./WishlistCard.css";
 import { WishlistContext } from "../../Context/wishlist-context";
 import { CartContext } from "../../Context/cart-context.js";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function WishlistCard() {
   const { wishlist, wishlistDispatch } = useContext(WishlistContext);
   const { dispatch } = useContext(CartContext);
+
+  const notify = (msg) =>
+    toast.success(msg, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   return (
     <div className="wishlist-container">
@@ -19,12 +33,13 @@ export default function WishlistCard() {
                     ? "fas fa-heart wish-icon markFavorite"
                     : "fas fa-heart wish-icon"
                 }
-                onClick={() =>
+                onClick={() => {
                   wishlistDispatch({
                     type: "REMOVE_FROM_WISHLIST",
                     payload: { product: product },
-                  })
-                }
+                  });
+                  notify("Item removed from Wishlist!");
+                }}
               ></i>
               <div className="background-Image">
                 <img className="card-img1" src={product.imgUrl} alt="photo" />
@@ -53,9 +68,10 @@ export default function WishlistCard() {
               <div className="verticalCard-footer">
                 <button
                   className="addItem-btn"
-                  onClick={() =>
-                    dispatch({ type: "ADDED", payload: { product: product } })
-                  }
+                  onClick={() => {
+                    dispatch({ type: "ADDED", payload: { product: product } });
+                    notify("Item added to the Cart!");
+                  }}
                 >
                   Add to Cart
                 </button>
@@ -64,6 +80,18 @@ export default function WishlistCard() {
           </li>
         );
       })}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {wishlist.length === 0 && (
         <iframe
           className="empty-gif"
