@@ -1,8 +1,8 @@
 import React, { useContext, useReducer } from "react";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { ProductContext } from "../../Context/product-context";
-import "./ProductListing.css";
 import { reducer } from "../../Reducer/filter-reducer";
+import "./ProductListing.css";
 
 export default function ProductListing() {
   const { products } = useContext(ProductContext);

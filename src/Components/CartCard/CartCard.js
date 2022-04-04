@@ -1,11 +1,23 @@
 import React, { useContext } from "react";
+import { CartContext, WishlistContext } from "../../Context/index";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./CartCard.css";
-import { CartContext } from "../../Context/cart-context.js";
-import { WishlistContext } from "../../Context/wishlist-context";
 
 export default function CartCard() {
   const { cart, dispatch } = useContext(CartContext);
   const { wishlistDispatch } = useContext(WishlistContext);
+
+  const notify = (msg) =>
+    toast.success(msg, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   return (
     <div className="wishlist-container">
@@ -49,12 +61,12 @@ export default function CartCard() {
                       {product.quantity}
                       <button
                         className="btn-changeQty"
-                        onClick={() =>
+                        onClick={() => {
                           dispatch({
                             type: "ADDED",
                             payload: { product: product },
-                          })
-                        }
+                          });
+                        }}
                       >
                         +
                       </button>
@@ -64,23 +76,25 @@ export default function CartCard() {
                 <div className="horizontalCard-footer">
                   <button
                     className="horizontal-btn removeItem-btn"
-                    onClick={() =>
+                    onClick={() => {
                       dispatch({
                         type: "DELETED",
                         payload: { product: product },
-                      })
-                    }
+                      });
+                      notify("Item removed from the Cart!");
+                    }}
                   >
                     Remove from Cart
                   </button>
                   <button
                     className="horizontal-btn moveItem-btn"
-                    onClick={() =>
+                    onClick={() => {
                       wishlistDispatch({
                         type: "ADD_TO_WISHLIST",
                         payload: { product: product },
-                      })
-                    }
+                      });
+                      notify("Item moved to the Wishlist!");
+                    }}
                   >
                     Move to Wishlist
                   </button>
@@ -90,6 +104,18 @@ export default function CartCard() {
           </li>
         );
       })}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
 
       {cart.length === 0 && (
         <iframe
