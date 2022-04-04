@@ -11,6 +11,18 @@ export default function Search() {
 
   const handleChange = (e) => {
     e.preventDefault();
+    const newList = products.filter((product) => {
+      if (
+        product.title.toLowerCase().includes(e.target.value) ||
+        product.categoryName.toLowerCase().includes(e.target.value)
+      ) {
+        return product;
+      }
+    });
+    setSearchList(newList);
+    let len = newList.length;
+    if (len > 0) setSuccesMsg(`Found ${len} products with matching name`);
+    else setSuccesMsg("Match not found!");
     setSearch(e.target.value);
   };
 
