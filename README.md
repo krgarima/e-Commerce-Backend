@@ -63,7 +63,12 @@ a. Filters
 - Dummy login button
 - Create a New Account button
 
-6. Log out
+### 6. Log out
+
+### 7. Seach
+
+### 8. Loading & Alerts/Toasts
+
 
 ## Tech Stack
 
