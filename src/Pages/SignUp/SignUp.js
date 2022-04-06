@@ -9,7 +9,7 @@ export default function SignUp() {
         <h1 className="signUp-heading">Sign Up</h1>
         <div className="signup-contents">
           <label htmlFor="userFName" className="userNm">
-            First Name*
+            First Name
           </label>
           <input
             type="text"
@@ -19,7 +19,7 @@ export default function SignUp() {
           />
           <br />
           <label htmlFor="userLName" className="userNm">
-            Last Name*
+            Last Name
           </label>
           <input
             type="text"
@@ -29,7 +29,7 @@ export default function SignUp() {
           />
           <br />
           <label htmlFor="userEmail" className="userNm">
-            Email address*
+            Email address
           </label>
           <input
             type="text"
@@ -39,7 +39,7 @@ export default function SignUp() {
           />
           <br />
           <label htmlFor="userNewPswd" className="userPswd">
-            Password*
+            Password
           </label>
           <input
             type="password"
@@ -49,7 +49,7 @@ export default function SignUp() {
           />
           <br />
           <label htmlFor="userRetypePswd" className="userPswd">
-            Confirm Password*
+            Confirm Password
           </label>
           <input
             type="password"

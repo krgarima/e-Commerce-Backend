@@ -33,7 +33,7 @@
   margin: 1rem;
 }
 
-.signup-contents {
+.login-contents {
   width: 18vw;
   height: 50vh;
   display: flex;
@@ -41,7 +41,7 @@
   justify-content: space-evenly;
 }
 
-.signup-contents input {
+.login-contents input {
   height: 4vh;
 }
 
@@ -49,7 +49,7 @@
   margin: 0 1rem;
 }
 
-.signup-contents label {
+.login-contents label {
   font-weight: 600;
   font-size: 1.5rem;
 }

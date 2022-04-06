@@ -15,7 +15,7 @@
 }
 
 .searchContainer .fa-search {
-  color: purple;
+  color: var(--purple-color);
   margin-left: 2rem;
 }
 
@@ -30,5 +30,5 @@
 .success-msg {
   font-size: 1.5rem;
   margin: 2rem 0 4rem 0;
-  color: purple;
+  color: var(--purple-color);
 }

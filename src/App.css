@@ -86,9 +86,6 @@
 
 .welcomeMsg h2 {
   font-weight: 600;
-}
-
-.welcomeMsg h2 {
   color: var(--white-color);
 }
 

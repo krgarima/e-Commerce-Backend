@@ -7,7 +7,7 @@ export default function Search() {
   const [search, setSearch] = useState("");
   const { products } = useContext(ProductContext);
   const [searchList, setSearchList] = useState([]);
-  const [successMsg, setSuccesMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -21,8 +21,8 @@ export default function Search() {
     });
     setSearchList(newList);
     let len = newList.length;
-    if (len > 0) setSuccesMsg(`Found ${len} products with matching name`);
-    else setSuccesMsg("Match not found!");
+    if (len > 0) setSuccessMsg(`Found ${len} products with matching name`);
+    else setSuccessMsg("Match not found!");
     setSearch(e.target.value);
   };
 
@@ -38,8 +38,8 @@ export default function Search() {
     });
     setSearchList(newList);
     let len = newList.length;
-    if (len > 0) setSuccesMsg(`Found ${len} products with matching name`);
-    else setSuccesMsg("Match not found!");
+    if (len > 0) setSuccessMsg(`Found ${len} products with matching name`);
+    else setSuccessMsg("Match not found!");
   };
 
   return (

@@ -28,7 +28,7 @@
 
 .signup-contents {
   width: 18vw;
-  height: 50vh;
+  height: 58vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -49,6 +49,7 @@
 .check {
   display: flex;
   align-items: center;
+  margin: 1rem 0;
 }
 
 .signup-btns {
@@ -69,6 +70,11 @@
 
 .toLoginPage-btn {
   background-color: var(--white-color);
+  padding: 1rem 0;
+}
+
+.signup-contents input {
+  padding: 1rem;
 }
 
 /********** mobile mode *********/
