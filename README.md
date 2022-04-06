@@ -63,9 +63,9 @@ a. Filters
 - Dummy login button
 - Create a New Account button
 
-### 6. Log out
+### 6. Log out button
 
-### 7. Seach
+### 7. Search
 
 ### 8. Loading & Alerts/Toasts
 
