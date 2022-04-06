@@ -49,7 +49,7 @@ export default function Login() {
     <div className="SignUp center">
       <div className="signUp-Container">
         <h1 className="signUp-heading">Login</h1>
-        <form className="login-contents">
+        <form className="signup-contents">
           <label htmlFor="userNm" className="userNm">
             Email address
           </label>

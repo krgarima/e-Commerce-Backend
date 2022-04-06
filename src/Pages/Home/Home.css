@@ -110,7 +110,7 @@ strike {
 }
 
 .discount {
-  color: green;
+  color: var(--green-color);
   margin-left: 0.8rem;
   font-size: 1.2rem;
 }
@@ -197,7 +197,7 @@ strike {
 .category {
   width: 40rem;
   height: 40rem;
-  border: 1px solid gray;
+  border: 1px solid var(--darkGray-color);
 }
 
 .categories {

@@ -18,7 +18,7 @@
 }
 
 .signUp-heading {
-  font-size: 3.5vh;
+  font-size: 3.8rem;
   font-weight: 600;
   margin: 1.5rem 0 2rem 0;
 }
@@ -33,25 +33,8 @@
   margin: 1rem;
 }
 
-.login-contents {
-  width: 18vw;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.login-contents input {
-  height: 4vh;
-}
-
 .userAgreement {
   margin: 0 1rem;
-}
-
-.login-contents label {
-  font-weight: 600;
-  font-size: 1.5rem;
 }
 
 .check {
