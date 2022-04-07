@@ -26,6 +26,16 @@
   border: 2px solid var(--reddishGray-color);
   border-radius: 2rem;
   background-color: var(--white-color);
+  position: relative;
+}
+
+.item-display .wish-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px 3.8rem 3px 8px;
 }
 
 .btn-addToCart,

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./ProductDetails.css";
 import products from "../../backend/db/products";
 import { useParams } from "react-router-dom";
-import { CartContext } from "../../Context";
+import { CartContext, WishlistContext } from "../../Context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -10,6 +10,7 @@ export default function ProductDetails() {
   const productList = products.products;
   const { productId } = useParams();
   const { dispatch } = useContext(CartContext);
+  const { wishlistDispatch } = useContext(WishlistContext);
 
   const findProduct = productList.find((product) => product._id === productId);
 
@@ -40,6 +41,20 @@ export default function ProductDetails() {
       <div className="product-details">
         <aside className="item-display">
           <img src={imgUrl} alt="product-image" className="item-image" />
+          <i
+            className={
+              findProduct.isFavorite
+                ? "fas fa-3x fa-heart wish-icon markFavorite"
+                : "fas fa-3x fa-heart wish-icon"
+            }
+            onClick={() => {
+              wishlistDispatch({
+                type: "ADD_TO_WISHLIST",
+                payload: { product: { ...findProduct, id: productId } },
+              });
+              notify("Item added to the Wishlist!");
+            }}
+          ></i>
           <div>
             <button
               className="btn-addToCart"
