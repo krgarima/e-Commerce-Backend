@@ -22,6 +22,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { "Number of Puzzle Pieces": 9 },
+      { "Age Range": "3 and above" },
+      { "Puzzle type": "Knob and Pegged" },
+      { Theme: "Vegetables" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      "Premium Wooden Board with easy to hold knobs. Helps kids to improve hand and eye coordination. Helps child to build Object recognition ability. Its a great and safe tool for Self-Engagement and exploring new learning.It helps to increase their Cognitive skills.It is a great way to limit screen time of kids and encourage them for Indoor Games",
   },
   {
     _id: uuid(),
@@ -39,6 +48,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: true,
+    details: [
+      { "Number of Puzzle Pieces": 23 },
+      { "Age Range": "Kid" },
+      { "Puzzle type": "Knob and Pegged" },
+      { Theme: "Maps" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      "Premium quality India Map with State-Wise cut.Illustrated with State capitals and key attractions.Precision Laser cut for clearer.depiction. Sturdy Mdf Wood with Easy to hold knobs. Excellent item for early learning and gifting",
   },
   {
     _id: uuid(),
@@ -55,6 +73,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { "Number of Puzzle Pieces": 9 },
+      { "Age Range": "Kid" },
+      { "Puzzle type": "Sequential Discovery" },
+      { Theme: "Maps" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      "Helps know more abut India - Our country in fun filled way. Safe and easy way to self engage kids, drastically reduces screen time. Helps in improving cognitive abilities, motor skills, memory building. Its a great and safe tool for Self-Engagement and exploring new learning. It helps to increase theiChild can learn states and their capital in very unique and fun manner Cognitive skills. It is a great way to limit screen time of kids and encourage them for Indoor Games. Beautifully illustrated with Monuments and unique thing about India. ",
   },
   {
     _id: uuid(),
@@ -71,6 +98,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { "Number of Puzzle Pieces": 9 },
+      { "Age Range": "Kid" },
+      { "Puzzle type": "Sequential Discovery" },
+      { Theme: "Maps" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      "Helps know more abut India - Our country in fun filled way. Safe and easy way to self engage kids, drastically reduces screen time. Helps in improving cognitive abilities, motor skills, memory building. Its a great and safe tool for Self-Engagement and exploring new learning. It helps to increase theiChild can learn states and their capital in very unique and fun manner Cognitive skills. It is a great way to limit screen time of kids and encourage them for Indoor Games. Beautifully illustrated with Monuments and unique thing about India. ",
   },
   {
     _id: uuid(),
@@ -87,6 +123,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: true,
+    details: [
+      { "Number of Puzzle Pieces": 26 },
+      { "Age Range": "Kid" },
+      { "Puzzle type": "Knob and Pegged" },
+      { Theme: "Numbers" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      " Good Quality Wooden Board. Easy to hold Knobs. Self Learning. Improve Hand Eye Co-ordination. Motor Skills. ",
   },
   {
     _id: uuid(),
@@ -103,6 +148,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { "Number of Puzzle Pieces": 60 },
+      { "Age Range": "Kid" },
+      { "Puzzle type": "Jigsaw" },
+      { Theme: "Maps" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      "First Leaning toys for kids with easy to hold knobs. Safe and easy way to self engage kids, drastically reduces screen time. Helps in improving cognitive abilities, motor skills, memory building. Beautifully illustrated fruits for kids. Fruits Puzzle. ",
   },
   {
     _id: uuid(),
@@ -119,6 +173,14 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: true,
+    details: [
+      { Colour: "Red , Golden, Silver, Blue , White" },
+      { Material: "Wood" },
+      { Brand: "BlackMole" },
+      { Theme: "Holiday, Seasons" },
+    ],
+    about:
+      "Make your Christmas decoration super special with BlackMole’s Winter Wondersticks Christmas decoration DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own New Year Corner in any style and pattern and feel more confident about exploring themselves. The Kit comes with a beautiful Honeycomb Christmas tree to givefestival look and feel. Ice-cream stickes and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. Get a predesigned cards for your friends and a card from Santa asking for your wish list. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. Elegant Christmas decoration experience. ",
   },
   {
     _id: uuid(),
@@ -135,6 +197,14 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Red , Golden, Silver, Blue , White" },
+      { Material: "Wood" },
+      { Brand: "BlackMole" },
+      { Theme: "Holiday, Seasons" },
+    ],
+    about:
+      "Make your Christmas decoration super special with BlackMole’s Winter Wondersticks Christmas decoration DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own New Year Corner in any style and pattern and feel more confident about exploring themselves. The Kit comes with a beautiful Honeycomb Christmas tree to givefestival look and feel. Ice-cream stickes and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. Get a predesigned cards for your friends and a card from Santa asking for your wish list. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. Elegant Christmas decoration experience. ",
   },
   {
     _id: uuid(),
@@ -151,6 +221,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Multicolor" },
+      { Material: "Paper" },
+      { Size: "Large" },
+      { Brand: "BlackMole" },
+      { "Included Components": "Gift for kids" },
+    ],
+    about:
+      "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Self Learning and self engagement, drastically reduces screen time. Easy to play and use material for showcasing creativity. Motor Skills. ",
   },
   {
     _id: uuid(),
@@ -167,6 +246,18 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Red , Golden, Silver, Blue , White" },
+      { Material: "Engineered Wood" },
+      { Brand: "BlackMole" },
+      { Theme: "Love, Religious" },
+      {
+        "Included Components":
+          "Pom Pom, Decorative Buttons, Glue, Decorative Rope, Sparkle, Green Wool, Coaster, MDF Christmas ornaments, 12 Colour set with Brush, HoneyComb TreePom Pom, Decorative Buttons, Glue, Decorative Rope, Sparkle, Green Wool, Coaster, MDF Christmas ornaments",
+      },
+    ],
+    about:
+      "Make your Christmas Corner super special with BlackMole’s MY CHRISTMAS CORNER DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own Christmas Corner in any style and pattern and feel more confident about exploring themselves.The Kit comes with a beautiful honeycomb Christmas tree and a Set of 8 beautiful laser-cut premium quality MDF pieces for the Christmas Tree Sculpture:3 Trees, Santa Claus, a Sleigh, a Reindeer, Merry Christmas, and a stand. 10 Christmas Ornaments that are a must-have for decoration this season: Sock, Gift Box, Snowman, Bell, Reindeer, Candy, Snowflake, Gingerbread man, Star and an Angel. Pom-poms and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. Elegant Christmas decoration experience.",
   },
   {
     _id: uuid(),
@@ -183,6 +274,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Red , Golden, Silver" },
+      { Material: "Wood" },
+      { Brand: "BlackMole" },
+      { "Number of Puzzle Pieces": 18 },
+      { "Model Name": "DIY Coloring KIT" },
+    ],
+    about:
+      "My India Coloring kit is a tool for children to have fun and learning together. My Country Coloring DIY Kit imparts knowledge about the country in fun manner which helps in their social well being. The Kit comes with Set of India Map, Flag and National Emblems with beautiful laser-cut on premium quality MDF. Pom-poms and Beads for decoration alongwith Tempera Color which has Silver and Gold. Creativity and Imagination. ",
   },
   {
     _id: uuid(),
@@ -199,6 +299,18 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Red , Golden, Silver, Blue , White" },
+      { Material: "Engineered Wood" },
+      { Brand: "BlackMole" },
+      { Theme: "Religious" },
+      {
+        "Included Components":
+          "Pom Pom, Decorative Buttons, Glue, Decorative Rope, Sparkle, Green Wool, MDF Christmas ornaments, 12 Colour set with BrushPom Pom, Decorative Buttons, Glue, Decorative Rope, Sparkle, Green Wool, MDF Christmas ornaments, 12 Colour set with Brush",
+      },
+    ],
+    about:
+      "Make your Christmas Corner super special with BlackMole’s MY CHRISTMAS CORNER DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own Christmas Corner in any style and pattern and feel more confident about exploring themselves. The Kit comes with Set of 8 beautiful laser-cut premium quality MDF pieces for the Christmas Tree Sculpture:3 Trees, Santa Claus, a Sleigh, a Reindeer, Merry Christmas, and a stand. 10 Christmas Ornaments that are a must-have for decoration this season: Sock, Gift Box, Snowman, Bell, Reindeer, Candy, Snowflake, Gingerbread man, Star and an Angel. Pom-poms and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. ",
   },
   {
     _id: uuid(),
@@ -215,6 +327,14 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Orange, Green, White" },
+      { Material: "Paper" },
+      { Brand: "BlackMole" },
+      { "Included Components": "Glue" },
+    ],
+    about:
+      "Make your Republic/ Independence day decoration super special with BlackMole’s India Decoration Kit. Kids can design their own Independence/ Republic Day Corner in any style and pattern and feel more confident about exploring themselves.he Kit comes with a beautiful Tricolor Mask, Tricolor flag, Tiranga Band, Kit frill for decoration, Tricolor balloons,..",
   },
   {
     _id: uuid(),
@@ -231,6 +351,14 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Multicolor" },
+      { Material: "Foam" },
+      { Size: "Large" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Easy to play and use material for showcasing creativity. Motor Skills.",
   },
   {
     _id: uuid(),
@@ -247,6 +375,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: true,
+    details: [
+      { Colour: "Multicolor" },
+      { Material: "Engineered Wood" },
+      { Brand: "BlackMole" },
+      { Theme: "Janmashtami" },
+      { "Included Components": "Colors" },
+    ],
+    about:
+      "Get premium quality laser cut MDF pieces to assemble into a Jhoola for Krishna. Safe and easy way to self engage kids, help reduce screen time. Helps in improving cognitive abilities, motor skills, memory building. Kids can explore their aesthetic sense and designing skills. ",
   },
   {
     _id: uuid(),
@@ -263,6 +400,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Multicolor" },
+      { Material: "Paper" },
+      { Size: "Large" },
+      { Brand: "BlackMole" },
+      { "Number of Puzzle": "26 Pieces" },
+    ],
+    about:
+      "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Easy to play and use material for showcasing creativity. Motor Skills.",
   },
   {
     _id: uuid(),
@@ -279,6 +425,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Multicolor" },
+      { Material: "Wood" },
+      { Size: "Small" },
+      { Brand: "BlackMole" },
+      { "Number of Puzzle": "26 Pieces" },
+    ],
+    about:
+      "Good quality wood. Easy to assemble and play. Self engaging. Improve Hand Eye Co-ordination. Improves creativity. ",
   },
   {
     _id: uuid(),
@@ -295,6 +450,14 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Multicolor" },
+      { Material: "Paper" },
+      { Size: "Large" },
+      { Brand: "BlackMole" },
+    ],
+    about:
+      "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Improve Hand Eye Co-ordination. Motor Skills. ",
   },
   {
     _id: uuid(),
@@ -311,6 +474,15 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { "Number of Puzzle Pieces": 9 },
+      { "Age Range": "Kid" },
+      { Brand: "BlackMole" },
+      { Material: "Foam, Paper" },
+      { Colour: "Multicolor" },
+    ],
+    about:
+      "High Quality Laser cut foam sheets. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Easy to learn and create badges. Child Safe but supervision suggested. High Quality magnet is used which is safe and easy to handle. ",
   },
   {
     _id: uuid(),
@@ -327,5 +499,16 @@ export const products = [
     quantity: 1,
     isFavorite: false,
     isBestSeller: false,
+    details: [
+      { Colour: "Multicolor" },
+      { Material: "Foam" },
+      { Brand: "BlackMole" },
+      { Style: "Craft Diy kit" },
+      { "Number of Puzzle": "9 Pieces" },
+    ],
+    about:
+      "5 High Quality Laser cut foam and thread to make rakhis. Gift Items worth Rs. 200. Decorative beads and cut outs for decoration.Easy to play and use material for showcasing creativity and connect more with the festivities. ",
   },
 ];
+
+export default { products };

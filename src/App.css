@@ -141,7 +141,7 @@ strike {
 }
 
 .discount {
-  color: green;
+  color: var(--green-color);
   margin-left: 0.8rem;
   font-size: 1.2rem;
 }
