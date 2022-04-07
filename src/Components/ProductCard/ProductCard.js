@@ -3,6 +3,7 @@ import { CartContext, WishlistContext } from "../../Context/index";
 import "./ProductCard.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ products }) {
   const { dispatch } = useContext(CartContext);
@@ -41,18 +42,20 @@ export default function ProductCard({ products }) {
                   }}
                 ></i>
                 <div className="background-Image">
-                  <img
-                    className="card-img1"
-                    src={product.imgUrl}
-                    alt="card-photo"
-                  />
+                  <Link to={`/ProductDetails/${product._id}`}>
+                    <img
+                      className="card-img1"
+                      src={product.imgUrl}
+                      alt="card-photo"
+                    />
+                  </Link>
                 </div>
                 <div className="card-title">
                   <h2>{product.title}</h2>
                 </div>
                 <div className="description1">
                   <p className="item-price">
-                    {product.price}
+                    ₹ {product.price}
                     <strike>₹ 700</strike>
                     <span className="discount">({product.discount})</span>
                   </p>

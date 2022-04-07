@@ -10,11 +10,6 @@
   background-color: var(--white-color);
 }
 
-/********** mobile mode *********/
-
-@media only screen and (max-width: 800px) {
-}
-
 /******* addition ******/
 
 .wishlist-container {
@@ -29,4 +24,9 @@
 
 .wish-icon {
   width: 3rem;
+}
+
+/********** mobile mode *********/
+
+@media only screen and (max-width: 800px) {
 }

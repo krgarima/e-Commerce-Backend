@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import { AuthContext } from "./Context/auth-context";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
 
 import {
   Home,
@@ -31,6 +32,10 @@ function App() {
           <Route path="/Cart" element={logged ? <Cart /> : <Login />} />
           <Route path="/Wishlist" element={logged ? <Wishlist /> : <Login />} />
           <Route path="/Search" element={<Search />} />
+          <Route
+            path="/ProductDetails/:productId"
+            element={<ProductDetails />}
+          />
           <Route
             path="*"
             element={
