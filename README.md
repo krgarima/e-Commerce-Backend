@@ -68,7 +68,7 @@ a. Filters
 ### 7. Product details page - 
 - User can see the details of any product
 
-### 7. Search - 
+### 8. Search - 
 - Search any product by clicking on the Search icon in the Navbar
 
 ### 9. Loading & Alerts/Toasts
