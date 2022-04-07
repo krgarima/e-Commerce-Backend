@@ -27,12 +27,12 @@ const withinPriceRange = (arr) => {
 };
 
 const filterByCategory = (arr) => {
-  const { value, products, checked } = arr;
+  const { value, products, checked, allProducts } = arr;
   if (checked)
     return products
       .filter((item) => item.inStock === true)
       .filter((item) => item.categoryName === value);
-  else return products;
+  else return allProducts;
 };
 
 export {

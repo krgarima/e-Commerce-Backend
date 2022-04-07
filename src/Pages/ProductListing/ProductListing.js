@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from "react";
+import React, { useContext, useReducer, useState } from "react";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { ProductContext } from "../../Context/product-context";
 import { reducer } from "../../Reducer/filter-reducer";
@@ -7,6 +7,7 @@ import "./ProductListing.css";
 export default function ProductListing() {
   const { products } = useContext(ProductContext);
   const [state, dispatch] = useReducer(reducer, { filterData: [] });
+  const [isInRange, setIsInRange] = useState(0);
 
   return (
     <div>
@@ -38,13 +39,15 @@ export default function ProductListing() {
                 max="1100"
                 className="slider"
                 id="filterRange"
-                onChange={(e) =>
+                onChange={(e) => {
                   dispatch({
                     type: "PRICE_RANGE",
                     payload: { value: e.target.value, products: products },
-                  })
-                }
+                  });
+                  setIsInRange(e.target.value);
+                }}
               />
+              <div id="rangeValue">₹ {isInRange}</div>
             </fieldset>
 
             <fieldset className="filter-Category">
@@ -61,6 +64,7 @@ export default function ProductListing() {
                     payload: {
                       value: e.target.value,
                       checked: e.target.checked,
+                      allProducts: products,
                       products:
                         state.filterData.length === 0
                           ? products
@@ -84,6 +88,7 @@ export default function ProductListing() {
                     payload: {
                       value: e.target.value,
                       checked: e.target.checked,
+                      allProducts: products,
                       products:
                         state.filterData.length === 0
                           ? products
