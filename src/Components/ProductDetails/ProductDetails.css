@@ -54,6 +54,11 @@
   color: var(--white-color);
 }
 
+.btn-addToCart:hover,
+.btn-buyNow:hover {
+  box-shadow: 2px 2px 2px var(--boxShadow-color);
+}
+
 .item-details {
   min-height: 35vh;
   width: 50vw;

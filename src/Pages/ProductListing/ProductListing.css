@@ -85,6 +85,7 @@
 
 .addItem-btn:hover {
   background-color: var(--darkPurple-color);
+  box-shadow: 1px 1px 1px var(--boxShadow-color);
 }
 
 /********** mobile mode *********/
