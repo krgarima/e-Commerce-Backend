@@ -65,10 +65,14 @@ a. Filters
 
 ### 6. Log out button
 
-### 7. Search
+### 7. Product details page - 
+- User can see the details of any product
 
-### 8. Loading & Alerts/Toasts
+### 7. Search - 
+- Search any product by clicking on the Search icon in the Navbar
 
+### 9. Loading & Alerts/Toasts
+- User is notified when he adds/removes items
 
 ## Tech Stack
 
