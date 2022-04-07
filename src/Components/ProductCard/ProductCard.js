@@ -12,10 +12,10 @@ export default function ProductCard({ products }) {
   const notify = (msg) =>
     toast.success(msg, {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: true,
+      pauseOnHover: false,
       draggable: true,
       progress: undefined,
     });
