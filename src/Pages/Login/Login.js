@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -6,43 +6,37 @@ import { AuthContext } from "../../Context/auth-context";
 import "./Login.css";
 
 export default function Login() {
-  const navigate = useNavigate();
-  const { userName, setUserName, password, setPassword, setLogged } =
+  const { setLogged, userName, setUserName, password, setPassword } =
     useContext(AuthContext);
+  const [error, setError] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const encodedToken = localStorage.getItem("token");
-    if (
-      encodedToken &&
-      userName === "adarshbalika@neog.camp" &&
-      password === "password"
-    ) {
+    if (!userName || !password) {
+      setError(true);
+      return;
+    }
+    try {
+      const response = await axios.post(`/api/auth/login`, {
+        email: userName,
+        password: password,
+      });
       setLogged(true);
-      navigate("/ProductListing");
-    } else {
-      setLogged(false);
+      localStorage.setItem("token", response.data.encodedToken);
       setUserName("");
       setPassword("");
+    } catch (error) {
+      console.log(error);
     }
+    navigate(-1);
   };
 
   const setDummyData = async (e) => {
     e.preventDefault();
-    setUserName("adarshbalika@neog.camp");
-    setPassword("password");
-
-    try {
-      const response = await axios.post(`/api/auth/signup`, {
-        firstName: "Adarsh",
-        lastName: "Balika",
-        email: "adarshbalika@neog.camp",
-        password: "adarshBalika",
-      });
-      localStorage.setItem("token", response.data.encodedToken);
-    } catch (error) {
-      console.log(error);
-    }
+    setUserName("marryjoe@gmail.com");
+    setPassword("marryjoe12345");
   };
 
   return (
