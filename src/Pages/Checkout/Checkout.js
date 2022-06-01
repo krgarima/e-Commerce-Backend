@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-// import CartCard from "../../Components/CartCard/CartCard";
 import { CartContext } from "../../Context/cart-context";
 import "./Checkout.css";
 
@@ -86,6 +85,8 @@ export default function Checkout() {
     // console.log(data);
     const options = {
       key: "rzp_test_JTpMiaE4ZqOyY7", // Enter the Key ID generated from the Dashboard
+      key_id: "rzp_test_JTpMiaE4ZqOyY7",
+      key_secret: "dj5fTAWTojnXCzQSNlIKjnQm",
       name: "Blackmole Pvt Ltd",
       currency: "INR",
       amount: totalPrice * 100,

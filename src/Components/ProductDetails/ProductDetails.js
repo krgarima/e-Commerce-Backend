@@ -16,7 +16,7 @@ export default function ProductDetails() {
 
   const notify = (msg) =>
     toast.success(msg, {
-      position: "top-right",
+      position: "bottom-right",
       autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -106,7 +106,7 @@ export default function ProductDetails() {
         </aside>
       </div>
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
