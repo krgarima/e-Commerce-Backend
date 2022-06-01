@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CartContext, WishlistContext, AuthContext } from "../../Context/index";
 import "./NavBar.css";
 
@@ -8,6 +8,7 @@ export default function NavBar() {
   const { cart } = useContext(CartContext);
   const { wishlist } = useContext(WishlistContext);
   const { setLogged } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -50,14 +51,13 @@ export default function NavBar() {
               if (encodedToken) {
                 setLogged(false);
                 localStorage.removeItem("token");
+                navigate("/");
+              } else {
+                navigate("/login");
               }
             }}
           >
-            {encodedToken ? (
-              <Link to="/Login">Log Out</Link>
-            ) : (
-              <Link to="/Login">Log In</Link>
-            )}
+            {encodedToken ? "Log Out" : " Log In"}
           </button>
         </div>
       </div>

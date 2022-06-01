@@ -1,12 +1,11 @@
 import "./App.css";
-import React from "react";
-import { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import { AuthContext } from "./Context/auth-context";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
-
+import Checkout from "./Pages/Checkout/Checkout";
 import {
   Home,
   ProductListing,
@@ -18,11 +17,15 @@ import {
 } from "./Pages/index";
 
 function App() {
-  const { logged } = useContext(AuthContext);
+  const { logged, setLogged } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) setLogged(true);
+  }, []);
+
   return (
     <div className="App">
       <NavBar />
-
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,6 +34,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Cart" element={logged ? <Cart /> : <Login />} />
           <Route path="/Wishlist" element={logged ? <Wishlist /> : <Login />} />
+          <Route path="/Checkout" element={logged ? <Checkout /> : <Login />} />
           <Route path="/Search" element={<Search />} />
           <Route
             path="/ProductDetails/:productId"

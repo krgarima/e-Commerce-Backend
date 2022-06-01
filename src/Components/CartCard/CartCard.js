@@ -10,7 +10,7 @@ export default function CartCard() {
 
   const notify = (msg) =>
     toast.success(msg, {
-      position: "top-right",
+      position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -53,7 +53,7 @@ export default function CartCard() {
                         }
                       >
                         {product.quantity === 1 ? (
-                          <i class="fas fa-trash"></i>
+                          <i className="fas fa-trash"></i>
                         ) : (
                           "-"
                         )}
@@ -106,7 +106,7 @@ export default function CartCard() {
       })}
 
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}

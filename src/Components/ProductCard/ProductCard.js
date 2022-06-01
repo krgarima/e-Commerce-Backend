@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import { CartContext, WishlistContext } from "../../Context/index";
-import "./ProductCard.css";
+import { AuthContext } from "../../Context/auth-context";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import "./ProductCard.css";
 
 export default function ProductCard({ products }) {
   const { dispatch } = useContext(CartContext);
   const { wishlistDispatch } = useContext(WishlistContext);
+  const { logged } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const notify = (msg) =>
     toast.success(msg, {
@@ -34,11 +37,13 @@ export default function ProductCard({ products }) {
                       : "fas fa-heart wish-icon"
                   }
                   onClick={() => {
-                    wishlistDispatch({
-                      type: "ADD_TO_WISHLIST",
-                      payload: { product: product },
-                    });
-                    notify("Item added to the Wishlist!");
+                    logged
+                      ? wishlistDispatch({
+                          type: "ADD_TO_WISHLIST",
+                          payload: { product: product },
+                        })
+                      : navigate("/login");
+                    logged && notify("Item added to the Wishlist!");
                   }}
                 ></i>
                 <div className="background-Image">
@@ -73,11 +78,13 @@ export default function ProductCard({ products }) {
                   <button
                     className="addItem-btn"
                     onClick={() => {
-                      dispatch({
-                        type: "ADDED",
-                        payload: { product: product },
-                      });
-                      notify("Item added to the Cart!");
+                      logged
+                        ? dispatch({
+                            type: "ADDED",
+                            payload: { product: product },
+                          })
+                        : navigate("/login");
+                      logged && notify("Item added to the Cart!");
                     }}
                   >
                     Add to Cart

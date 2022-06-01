@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import CartCard from "../../Components/CartCard/CartCard";
 import { CartContext } from "../../Context/cart-context";
 import "./Cart.css";
@@ -50,7 +51,9 @@ export default function Cart() {
               <p>You will save ₹ {totalQty * 100} on this order.</p>
             </div>
             <div className="txtCard-footer">
-              <button className="order-btn">PLACE ORDER</button>
+              <Link to="/Checkout">
+                <button className="order-btn">CHECKOUT</button>
+              </Link>
             </div>
           </div>
         )}
