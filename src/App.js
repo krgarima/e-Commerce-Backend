@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import { AuthContext } from "./Context/auth-context";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Checkout from "./Pages/Checkout/Checkout";
+import Success from "./Components/Success/Success";
 import {
   Home,
   ProductListing,
@@ -15,6 +16,7 @@ import {
   Wishlist,
   Search,
 } from "./Pages/index";
+import Profile from "./Pages/Profile/Profile";
 
 function App() {
   const { logged, setLogged } = useContext(AuthContext);
@@ -33,8 +35,10 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Cart" element={logged ? <Cart /> : <Login />} />
+          <Route path="/Profile" element={logged ? <Profile /> : <Login />} />
           <Route path="/Wishlist" element={logged ? <Wishlist /> : <Login />} />
           <Route path="/Checkout" element={logged ? <Checkout /> : <Login />} />
+          <Route path="/Success" element={logged ? <Success /> : <Login />} />
           <Route path="/Search" element={<Search />} />
           <Route
             path="/ProductDetails/:productId"

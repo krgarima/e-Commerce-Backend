@@ -6,10 +6,16 @@ import { AuthContext } from "../../Context/auth-context";
 import "./Login.css";
 
 export default function Login() {
-  const { setLogged, userName, setUserName, password, setPassword } =
-    useContext(AuthContext);
+  const {
+    setLogged,
+    userName,
+    setUserName,
+    password,
+    setPassword,
+    rememberPassword,
+    setRememberPassword,
+  } = useContext(AuthContext);
   const [error, setError] = useState(false);
-  // const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -25,8 +31,10 @@ export default function Login() {
       });
       setLogged(true);
       localStorage.setItem("token", response.data.encodedToken);
-      setUserName("");
-      setPassword("");
+      if (!rememberPassword) {
+        setUserName("");
+        setPassword("");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -37,6 +45,7 @@ export default function Login() {
     e.preventDefault();
     setUserName("marryjoe@gmail.com");
     setPassword("marryjoe12345");
+    setError(false);
   };
 
   return (
@@ -53,7 +62,10 @@ export default function Login() {
             id="userNm"
             placeholder="Enter username"
             value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={(e) => {
+              setError(false);
+              setUserName(e.target.value);
+            }}
           />
           <br />
           <label htmlFor="userPswd" className="userPswd">
@@ -65,7 +77,10 @@ export default function Login() {
             id="userPswd"
             placeholder="Enter password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setError(false);
+              setPassword(e.target.value);
+            }}
           />
           <br />
           <div className="check">
@@ -74,11 +89,10 @@ export default function Login() {
               name="userAgreement"
               className="userAgreement"
               id="userAgreement"
+              checked={rememberPassword ? "true" : ""}
+              onClick={() => setRememberPassword(!rememberPassword)}
             />
             <label htmlFor="userAgreement">Remember me</label>
-            <a href="http://" rel="noopener noreferrer" className="forgotPswd">
-              Forgot your password?
-            </a>
           </div>
 
           <button
@@ -94,6 +108,7 @@ export default function Login() {
           <button className="signup-btns toSignUpPage-btn">
             <Link to="/SignUp">Create a New Account &gt;</Link>
           </button>
+          {error && <div className="error-auth">Invalid input !</div>}
         </form>
       </div>
     </div>

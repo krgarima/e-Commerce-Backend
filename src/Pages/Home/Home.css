@@ -54,14 +54,16 @@
 }
 
 .welcomeMsg h2 {
+  margin-top: 2px;
   color: var(--white-color);
 }
 
-.shopNow-btn a {
+.shopNow-btn {
   padding: 1rem 2.5rem;
   background-color: var(--purple-color);
   color: var(--white-color);
   font-size: 1.5rem;
+  border: 1px solid var(--yellow-color);
 }
 
 .shopNow-btn a:hover {

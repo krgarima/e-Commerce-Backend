@@ -59,6 +59,13 @@ export default function NavBar() {
           >
             {encodedToken ? "Log Out" : " Log In"}
           </button>
+          <div className="icon-Badge center">
+            {encodedToken && (
+              <Link to="/Profile">
+                <i className="fas fa-2x fa-user-circle"></i>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -16,17 +16,7 @@ export default function ProductListing() {
           <form className="filters">
             <fieldset className="filter-Clear">
               <span className="filter-heading">Filters</span>
-              <button
-                className="clearAll"
-                onClick={() =>
-                  dispatch({
-                    type: "default",
-                    payload: {
-                      products: products,
-                    },
-                  })
-                }
-              >
+              <button className="clearAll" onClick={() => form.reset()}>
                 Clear
               </button>
             </fieldset>

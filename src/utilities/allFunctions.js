@@ -28,11 +28,25 @@ const withinPriceRange = (arr) => {
 
 const filterByCategory = (arr) => {
   const { value, products, checked, allProducts } = arr;
-  if (checked)
-    return products
+
+  if (checked && value === "Puzzles")
+    return allProducts
       .filter((item) => item.inStock === true)
-      .filter((item) => item.categoryName === value);
-  else return allProducts;
+      .filter((item) => item.categoryName === "Puzzles");
+  if (checked && value === "Creative")
+    return allProducts
+      .filter((item) => item.inStock === true)
+      .filter((item) => item.categoryName === "Creative");
+  // if (!checked && value === "Puzzles")
+  //   return allProducts
+  //     .filter((item) => item.inStock === true)
+  //     .filter((item) => item.categoryName !== "Puzzles");
+  // if (!checked && value === "Creative")
+  //   return allProducts
+  //     .filter((item) => item.inStock === true)
+  //     .filter((item) => item.categoryName !== "Creative");
+
+  return allProducts;
 };
 
 export {

@@ -7,7 +7,7 @@ import { v4 as uuid } from "uuid";
 
 export const products = [
   {
-    _id: uuid(),
+    _id: "1a",
     title:
       "Wooden Puzzle Toy for Vegetables Identification with Cute Picture for Kids. First Learning Toy. ",
     price: "349",
@@ -33,7 +33,7 @@ export const products = [
       "Premium Wooden Board with easy to hold knobs. Helps kids to improve hand and eye coordination. Helps child to build Object recognition ability. Its a great and safe tool for Self-Engagement and exploring new learning.It helps to increase their Cognitive skills.It is a great way to limit screen time of kids and encourage them for Indoor Games",
   },
   {
-    _id: uuid(),
+    _id: "2b",
     title:
       "India Map Wooden Puzzle, State wise Cut, Easy to Hold knobs, Beautiful Illustration with Major Attractions.",
     price: "449",
@@ -59,7 +59,7 @@ export const products = [
       "Premium quality India Map with State-Wise cut.Illustrated with State capitals and key attractions.Precision Laser cut for clearer.depiction. Sturdy Mdf Wood with Easy to hold knobs. Excellent item for early learning and gifting",
   },
   {
-    _id: uuid(),
+    _id: "3c",
     title:
       "Quizine: India Map Poster Activity Kit. Have Fun answering The Questions with Stickers on India's Poster! ",
     price: "499",
@@ -84,7 +84,7 @@ export const products = [
       "Helps know more abut India - Our country in fun filled way. Safe and easy way to self engage kids, drastically reduces screen time. Helps in improving cognitive abilities, motor skills, memory building. Its a great and safe tool for Self-Engagement and exploring new learning. It helps to increase theiChild can learn states and their capital in very unique and fun manner Cognitive skills. It is a great way to limit screen time of kids and encourage them for Indoor Games. Beautifully illustrated with Monuments and unique thing about India. ",
   },
   {
-    _id: uuid(),
+    _id: "4d",
     title:
       'Solar System Puzzle, 60 Pc, 12"x18", Age 4+, Designed and Made in India. The Best Floor Puzzles for Your Kids! ',
     price: "299",
@@ -109,7 +109,7 @@ export const products = [
       "Helps know more abut India - Our country in fun filled way. Safe and easy way to self engage kids, drastically reduces screen time. Helps in improving cognitive abilities, motor skills, memory building. Its a great and safe tool for Self-Engagement and exploring new learning. It helps to increase theiChild can learn states and their capital in very unique and fun manner Cognitive skills. It is a great way to limit screen time of kids and encourage them for Indoor Games. Beautifully illustrated with Monuments and unique thing about India. ",
   },
   {
-    _id: uuid(),
+    _id: "5e",
     title:
       "Number Recognition Wooden Puzzle with Pictures to Promote Early Learning, Improve Motor Skills, Memory of Kids.",
     price: "749",
@@ -134,7 +134,7 @@ export const products = [
       " Good Quality Wooden Board. Easy to hold Knobs. Self Learning. Improve Hand Eye Co-ordination. Motor Skills. ",
   },
   {
-    _id: uuid(),
+    _id: "6g",
     title:
       'World System Puzzle, 60 Pc, 12"x18", Age 4+, Designed and Made in India. The Best Floor Puzzles for Your Kids!  ',
     price: "999",
@@ -159,7 +159,7 @@ export const products = [
       "First Leaning toys for kids with easy to hold knobs. Safe and easy way to self engage kids, drastically reduces screen time. Helps in improving cognitive abilities, motor skills, memory building. Beautifully illustrated fruits for kids. Fruits Puzzle. ",
   },
   {
-    _id: uuid(),
+    _id: "7h",
     title:
       "Winter Wondersticks DIY Kit with 15 Inch Honeycomb and Coaster, Ice- Cream Sticks, Patterned Seasons Greeting Cards. ",
     price: "299",
@@ -183,7 +183,7 @@ export const products = [
       "Make your Christmas decoration super special with BlackMole’s Winter Wondersticks Christmas decoration DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own New Year Corner in any style and pattern and feel more confident about exploring themselves. The Kit comes with a beautiful Honeycomb Christmas tree to givefestival look and feel. Ice-cream stickes and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. Get a predesigned cards for your friends and a card from Santa asking for your wish list. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. Elegant Christmas decoration experience. ",
   },
   {
-    _id: uuid(),
+    _id: "8i",
     title:
       "5-Set Animal Theme DIY Rakhi making kit with a Rs. 200 worth Gift Box! Contains Rakhi, Greeting card, a Gift set for...",
     price: "449",
@@ -207,7 +207,7 @@ export const products = [
       "Make your Christmas decoration super special with BlackMole’s Winter Wondersticks Christmas decoration DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own New Year Corner in any style and pattern and feel more confident about exploring themselves. The Kit comes with a beautiful Honeycomb Christmas tree to givefestival look and feel. Ice-cream stickes and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. Get a predesigned cards for your friends and a card from Santa asking for your wish list. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. Elegant Christmas decoration experience. ",
   },
   {
-    _id: uuid(),
+    _id: "9j",
     title:
       "5-Set Frozen Theme DIY rakhi making kit a Rs. 200 worth Gift Box! Contains Rakhi, Greeting card a Gift set for...",
     price: "899",
@@ -232,7 +232,7 @@ export const products = [
       "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Self Learning and self engagement, drastically reduces screen time. Easy to play and use material for showcasing creativity. Motor Skills. ",
   },
   {
-    _id: uuid(),
+    _id: "10k",
     title:
       "My Christmas Decoration DIY Coloring and Craft Kit with MDF Christmas Tree Set, Decorative Christmas... ",
     price: "649",
@@ -260,7 +260,7 @@ export const products = [
       "Make your Christmas Corner super special with BlackMole’s MY CHRISTMAS CORNER DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own Christmas Corner in any style and pattern and feel more confident about exploring themselves.The Kit comes with a beautiful honeycomb Christmas tree and a Set of 8 beautiful laser-cut premium quality MDF pieces for the Christmas Tree Sculpture:3 Trees, Santa Claus, a Sleigh, a Reindeer, Merry Christmas, and a stand. 10 Christmas Ornaments that are a must-have for decoration this season: Sock, Gift Box, Snowman, Bell, Reindeer, Candy, Snowflake, Gingerbread man, Star and an Angel. Pom-poms and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. Elegant Christmas decoration experience.",
   },
   {
-    _id: uuid(),
+    _id: "11l",
     title:
       "My India MDF Coloring Kit, Republic and Independence DIY set of India Map, National Flag, National Emblem with Colors, Pompom, Silver, Golden Beads..",
     price: "599",
@@ -285,7 +285,7 @@ export const products = [
       "My India Coloring kit is a tool for children to have fun and learning together. My Country Coloring DIY Kit imparts knowledge about the country in fun manner which helps in their social well being. The Kit comes with Set of India Map, Flag and National Emblems with beautiful laser-cut on premium quality MDF. Pom-poms and Beads for decoration alongwith Tempera Color which has Silver and Gold. Creativity and Imagination. ",
   },
   {
-    _id: uuid(),
+    _id: "12m",
     title:
       "My Christmas Decorations DIY Coloring and Craft Kit with MDF Christmas Tree Set, Christmas Ornaments, Santa Post Card, 12 Color Set and Decorative Materials.",
     price: "599",
@@ -313,7 +313,7 @@ export const products = [
       "Make your Christmas Corner super special with BlackMole’s MY CHRISTMAS CORNER DIY Kit, a fun and engaging festive activity that kids will absolutely love!. Kids can design their own Christmas Corner in any style and pattern and feel more confident about exploring themselves. The Kit comes with Set of 8 beautiful laser-cut premium quality MDF pieces for the Christmas Tree Sculpture:3 Trees, Santa Claus, a Sleigh, a Reindeer, Merry Christmas, and a stand. 10 Christmas Ornaments that are a must-have for decoration this season: Sock, Gift Box, Snowman, Bell, Reindeer, Candy, Snowflake, Gingerbread man, Star and an Angel. Pom-poms and sticky buttons for decoration ,1 pack each of Golden and Silver Glitter, Glue , Golden rope. 1 card from Santa with a wish-list to write all you want for Christmas and put it near your Christmas Corner. ",
   },
   {
-    _id: uuid(),
+    _id: "13n",
     title:
       "My India Decor Kit, 4 Caps, 4Tricolor Band, 2 Eye Mask, Tri-Color Balloons, Crepe Paper to Make hangings, Kite Frills for..",
     price: "499",
@@ -337,7 +337,7 @@ export const products = [
       "Make your Republic/ Independence day decoration super special with BlackMole’s India Decoration Kit. Kids can design their own Independence/ Republic Day Corner in any style and pattern and feel more confident about exploring themselves.he Kit comes with a beautiful Tricolor Mask, Tricolor flag, Tiranga Band, Kit frill for decoration, Tricolor balloons,..",
   },
   {
-    _id: uuid(),
+    _id: "14o",
     title:
       "5-Set God Theme DIY rakhi making kit with a Rs. 200 worth Gift Box. Contains Rakhi Greeting card and a Gift set for...",
     price: "359",
@@ -361,7 +361,7 @@ export const products = [
       "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Easy to play and use material for showcasing creativity. Motor Skills.",
   },
   {
-    _id: uuid(),
+    _id: "15p",
     title:
       "3D Janmashtami DIY Kit- Kanhaiya ka Jhoola, Easy to Assemble and Decorate Krishna's Favourite Place with This kit. ",
     price: "599",
@@ -386,7 +386,7 @@ export const products = [
       "Get premium quality laser cut MDF pieces to assemble into a Jhoola for Krishna. Safe and easy way to self engage kids, help reduce screen time. Helps in improving cognitive abilities, motor skills, memory building. Kids can explore their aesthetic sense and designing skills. ",
   },
   {
-    _id: uuid(),
+    _id: "16q",
     title:
       "5-Set Animal Theme DIY Rakhi making kit with a Rs. 200 worth Gift Box! Contains Rakhi, Greeting card and a Gift set for...",
     price: "449",
@@ -411,7 +411,7 @@ export const products = [
       "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Easy to play and use material for showcasing creativity. Motor Skills.",
   },
   {
-    _id: uuid(),
+    _id: "17r",
     title:
       "Ganpati Idol Mosaic Kit- DIY Craft for Kids Above Age 4. Prepare a Beautiful Ganesha Idol with The Best Engaging Activity for The Festive Season. ",
     price: "499",
@@ -436,7 +436,7 @@ export const products = [
       "Good quality wood. Easy to assemble and play. Self engaging. Improve Hand Eye Co-ordination. Improves creativity. ",
   },
   {
-    _id: uuid(),
+    _id: "18s",
     title:
       "5-Set Superhero Theme DIY rakhi making kit a Rs. 200 worth Gift Box by BlackMole!! Contains Rakhi, Greeting card and a Gift set for...",
     price: "459",
@@ -460,7 +460,7 @@ export const products = [
       "High Quality Laser foam cut out with smooth and clear edges. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Improve Hand Eye Co-ordination. Motor Skills. ",
   },
   {
-    _id: uuid(),
+    _id: "19t",
     title:
       "BadgeIT: India DIY Kit (Set of 5) Foam Cut Outs, Circle, Champion & India Shaped. Includes Colors, Magnets, Transparent Stickers ",
     price: "299",
@@ -485,7 +485,7 @@ export const products = [
       "High Quality Laser cut foam sheets. Helps parents to reduce screen time. Helps in improving upon their cognitive abilities, motor skills, increases coordination. Easy to learn and create badges. Child Safe but supervision suggested. High Quality magnet is used which is safe and easy to handle. ",
   },
   {
-    _id: uuid(),
+    _id: "20u",
     title:
       "5-Set Flower Theme DIY rakhi making kit with a Rs. 200 worth Gift Box by BlackMole!! Contains Rakhi, Greeting card and a Gift set for...",
     price: "509",
