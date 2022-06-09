@@ -26,11 +26,7 @@ export default function WishlistCard() {
           <li className="list-product" key={product.id}>
             <div className="card1 vertical-Card">
               <i
-                className={
-                  product.isFavorite
-                    ? "fas fa-heart wish-icon markFavorite"
-                    : "fas fa-heart wish-icon"
-                }
+                className="fas fa-heart wish-icon markFavorite"
                 onClick={() => {
                   wishlistDispatch({
                     type: "REMOVE_FROM_WISHLIST",

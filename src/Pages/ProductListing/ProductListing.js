@@ -8,12 +8,13 @@ export default function ProductListing() {
   const { products } = useContext(ProductContext);
   const [state, dispatch] = useReducer(reducer, { filterData: [] });
   const [isInRange, setIsInRange] = useState(0);
+  const [showFilter, setShowFilter] = useState(false);
 
   return (
     <div>
       <div className="productsContainer">
-        <aside className="filters">
-          <form className="filters">
+        <aside>
+          <form className={showFilter ? "filters" : "filters hideFilters"}>
             <fieldset className="filter-Clear">
               <span className="filter-heading">Filters</span>
               <button className="clearAll" onClick={() => form.reset()}>
@@ -190,6 +191,10 @@ export default function ProductListing() {
 
         <aside className="allProducts">
           <h1 className="allProducts-heading">All Products</h1>
+          <i
+            className="fas fa-2x fa-filter"
+            onClick={() => setShowFilter(!showFilter)}
+          ></i>
           <div className="myProduct">
             {state.filterData.length === 0 ? (
               <ProductCard products={products} />

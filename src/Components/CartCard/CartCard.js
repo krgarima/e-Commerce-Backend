@@ -93,6 +93,10 @@ export default function CartCard() {
                         type: "ADD_TO_WISHLIST",
                         payload: { product: product },
                       });
+                      dispatch({
+                        type: "DELETED",
+                        payload: { product: product },
+                      });
                       notify("Item moved to the Wishlist!");
                     }}
                   >

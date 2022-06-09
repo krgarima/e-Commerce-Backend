@@ -38,6 +38,10 @@
   margin: 1rem;
 }
 
+.Toastify__toast-body {
+  font-size: 1.2rem;
+}
+
 /********* old ***********/
 
 .mainBody {

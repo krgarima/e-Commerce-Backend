@@ -88,13 +88,45 @@
   box-shadow: 1px 1px 1px var(--boxShadow-color);
 }
 
+.fa-filter {
+  position: absolute;
+  top: 11vh;
+  right: 2vw;
+  visibility: hidden;
+  color: var(--purple-color);
+}
+
 /********** mobile mode *********/
 
 @media only screen and (max-width: 800px) {
   .filters {
+    position: absolute;
+    z-index: 1;
+    background-color: var(--white-color);
+    box-shadow: 4px 4px 4px var(--boxShadow-color);
+    width: 50vw;
+  }
+  .hideFilters {
     display: none;
   }
   .allProducts {
     width: 100vw;
+  }
+  .fa-filter {
+    top: 11vh;
+    right: 5vw;
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .filters {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .filters {
+    width: 80vw;
   }
 }

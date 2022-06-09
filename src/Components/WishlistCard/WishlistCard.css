@@ -8,6 +8,9 @@
 
 .vertical-Card .wish-icon {
   background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /******* addition ******/

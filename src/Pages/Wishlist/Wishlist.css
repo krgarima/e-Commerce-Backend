@@ -38,12 +38,3 @@
 }
 
 /********** mobile mode *********/
-
-@media only screen and (max-width: 800px) {
-  .filters {
-    display: none;
-  }
-  .allProducts {
-    width: 100vw;
-  }
-}
