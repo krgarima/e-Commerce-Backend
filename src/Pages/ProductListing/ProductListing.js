@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useState } from "react";
+import React, { useContext, useReducer, useState, useEffect } from "react";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { ProductContext } from "../../Context/product-context";
 import { reducer } from "../../Reducer/filter-reducer";
@@ -8,25 +8,20 @@ export default function ProductListing() {
   const { products } = useContext(ProductContext);
   const [state, dispatch] = useReducer(reducer, { filterData: [] });
   const [isInRange, setIsInRange] = useState(0);
+  const [showFilter, setShowFilter] = useState(false);
+
+  useEffect(() => {
+    document.title = "All products | Blackmole";
+  }, []);
 
   return (
     <div>
       <div className="productsContainer">
-        <aside className="filters">
-          <form className="filters">
+        <aside>
+          <form className={showFilter ? "filters" : "filters hideFilters"}>
             <fieldset className="filter-Clear">
               <span className="filter-heading">Filters</span>
-              <button
-                className="clearAll"
-                onClick={() =>
-                  dispatch({
-                    type: "default",
-                    payload: {
-                      products: products,
-                    },
-                  })
-                }
-              >
+              <button className="clearAll" onClick={() => form.reset()}>
                 Clear
               </button>
             </fieldset>
@@ -200,6 +195,10 @@ export default function ProductListing() {
 
         <aside className="allProducts">
           <h1 className="allProducts-heading">All Products</h1>
+          <i
+            className="fas fa-2x fa-filter"
+            onClick={() => setShowFilter(!showFilter)}
+          ></i>
           <div className="myProduct">
             {state.filterData.length === 0 ? (
               <ProductCard products={products} />

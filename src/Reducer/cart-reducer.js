@@ -37,6 +37,10 @@ export default function cartReducer(state, action) {
     case "DELETED": {
       return state.filter((itm) => itm.id !== action.payload.product.id);
     }
+
+    case "EMPTY-CART": {
+      return [];
+    }
     default:
       return state;
   }

@@ -10,6 +10,10 @@
   left: 1.8rem;
 }
 
+.log {
+  margin: 0;
+}
+
 .log:hover {
   border: none;
   color: var(--purple-color);
@@ -32,4 +36,10 @@
 
 .fa-search {
   color: var(--white-color);
+}
+
+@media only screen and (max-width: 400px) {
+  .company-logo {
+    margin: 0 1rem;
+  }
 }

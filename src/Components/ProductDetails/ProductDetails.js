@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
-import "./ProductDetails.css";
 import products from "../../backend/db/products";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { CartContext, WishlistContext } from "../../Context";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import "./ProductDetails.css";
 
 export default function ProductDetails() {
   const productList = products.products;
   const { productId } = useParams();
   const { dispatch } = useContext(CartContext);
   const { wishlistDispatch } = useContext(WishlistContext);
+  const navigate = useNavigate();
 
   const findProduct = productList.find((product) => product._id === productId);
 
@@ -68,7 +68,18 @@ export default function ProductDetails() {
             >
               Add to Cart
             </button>
-            <button className="btn-buyNow">Buy now</button>
+            <button
+              className="btn-buyNow"
+              onClick={() => {
+                dispatch({
+                  type: "ADDED",
+                  payload: { product: { ...findProduct, id: productId } },
+                });
+                navigate("/Checkout");
+              }}
+            >
+              Buy now
+            </button>
           </div>
         </aside>
 
@@ -105,17 +116,6 @@ export default function ProductDetails() {
           </table>
         </aside>
       </div>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </div>
   );
 }

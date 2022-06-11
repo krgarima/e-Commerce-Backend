@@ -20,3 +20,7 @@
 .markFavorite {
   color: var(--red-color);
 }
+
+.wish-icon:focus {
+  color: var(--red-color);
+}

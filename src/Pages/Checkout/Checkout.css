@@ -10,7 +10,7 @@
   min-height: 20vh;
   width: 30rem;
   margin: 2rem;
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 .address h2 {
@@ -22,7 +22,7 @@
 .address div {
   margin: 2rem;
   justify-content: space-between;
-  border: 1px solid purple;
+  border: 1px solid var(--purple-color);
   padding: 1rem;
 }
 
@@ -31,13 +31,13 @@
   min-width: 15rem;
   margin: 2rem;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 .orders h2 {
   font-size: 2.5rem;
-  background-color: plum;
-  border: 2px solid purple;
+  background-color: var(--lightPurple-color);
+  border: 2px solid var(--purple-color);
 }
 
 .order-Summary .card-details {
@@ -50,7 +50,7 @@
 
 .order-Summary hr {
   margin: 1rem 0;
-  color: purple;
+  color: var(--purple-color);
 }
 
 .deliver-to,
@@ -71,7 +71,7 @@
   padding: 2rem;
   min-height: 60vh;
   width: 30rem;
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 .new-address input {
@@ -79,14 +79,14 @@
 }
 
 .address .btn-addAddress {
-  background-color: yellow;
-  color: black;
+  background-color: var(--yellow-color);
+  color: var(--black-color);
   margin-bottom: 8px;
 }
 
 .address .btn-addAddress:hover {
-  background-color: yellow;
-  color: black;
+  background-color: var(--yellow-color);
+  color: var(--black-color);
 }
 
 .new-address h3 {
@@ -114,10 +114,10 @@
 }
 
 .add-newAddress {
-  background-color: purple;
-  color: white;
+  background-color: var(--purple-color);
+  color: var(--white-color);
 }
 
 .add-dummyAddress {
-  border: 1px solid purple;
+  border: 1px solid var(--purple-color);
 }

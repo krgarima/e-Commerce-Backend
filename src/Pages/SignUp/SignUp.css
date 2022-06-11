@@ -49,14 +49,12 @@
 .check {
   display: flex;
   align-items: center;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .signup-btns {
   border: none;
-  width: 85%;
   padding: 6px;
-  margin: 0 2vw;
 }
 
 .createNewAccount-btn {

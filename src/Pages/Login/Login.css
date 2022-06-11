@@ -20,7 +20,7 @@
 .signUp-heading {
   font-size: 3.8rem;
   font-weight: 600;
-  margin: 1.5rem 0 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .signUp-Container {
@@ -37,17 +37,14 @@
   margin: 0 1rem;
 }
 
-.check {
+/* .check {
   display: flex;
   align-items: center;
 }
 
 .signup-btns {
   border: none;
-  width: 85%;
-  padding: 6px;
-  margin: 0 2vw;
-}
+} */
 
 .createNewAccount-btn {
   background-color: var(--purple-color);
@@ -66,6 +63,13 @@
 .toSignUpPage-btn:hover {
   border: 2px solid var(--deepPurple-color);
   border-radius: 2px;
+}
+
+.error-auth {
+  color: var(--red-color);
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 3rem;
 }
 
 /********** mobile mode *********/

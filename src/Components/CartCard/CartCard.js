@@ -93,6 +93,10 @@ export default function CartCard() {
                         type: "ADD_TO_WISHLIST",
                         payload: { product: product },
                       });
+                      dispatch({
+                        type: "DELETED",
+                        payload: { product: product },
+                      });
                       notify("Item moved to the Wishlist!");
                     }}
                   >
@@ -104,18 +108,6 @@ export default function CartCard() {
           </li>
         );
       })}
-
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
 
       {cart.length === 0 && (
         <iframe

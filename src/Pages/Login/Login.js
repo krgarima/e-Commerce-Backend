@@ -1,23 +1,50 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../../Context/auth-context";
+import { toast } from "react-toastify";
+import axios from "axios";
 import "./Login.css";
 
 export default function Login() {
-  const { setLogged, userName, setUserName, password, setPassword } =
-    useContext(AuthContext);
-  const [error, setError] = useState(false);
-  // const [showPassword, setShowPassword] = useState(false);
+  const {
+    setLogged,
+    userName,
+    setUserName,
+    password,
+    setPassword,
+    rememberPassword,
+    setRememberPassword,
+  } = useContext(AuthContext);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Login | Blackmole";
+  }, []);
+
+  const notify = (msg) =>
+    toast.error(msg, {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
 
   const handleLogin = async (e) => {
     e.preventDefault();
     if (!userName || !password) {
-      setError(true);
+      notify("Missing fields");
       return;
+    } else if (
+      userName !== "marryjoe@gmail.com" ||
+      password !== "marryjoe12345"
+    ) {
+      notify("Incorrect username or password!");
     }
+
     try {
       const response = await axios.post(`/api/auth/login`, {
         email: userName,
@@ -25,12 +52,15 @@ export default function Login() {
       });
       setLogged(true);
       localStorage.setItem("token", response.data.encodedToken);
-      setUserName("");
-      setPassword("");
+      if (!rememberPassword) {
+        setUserName("");
+        setPassword("");
+      }
+      navigate(-1);
     } catch (error) {
-      console.log(error);
+      notify("Please refresh. Something went wrong!");
+      // console.log(error);
     }
-    navigate(-1);
   };
 
   const setDummyData = async (e) => {
@@ -53,7 +83,9 @@ export default function Login() {
             id="userNm"
             placeholder="Enter username"
             value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
           />
           <br />
           <label htmlFor="userPswd" className="userPswd">
@@ -65,7 +97,9 @@ export default function Login() {
             id="userPswd"
             placeholder="Enter password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           <br />
           <div className="check">
@@ -74,11 +108,11 @@ export default function Login() {
               name="userAgreement"
               className="userAgreement"
               id="userAgreement"
+              readOnly
+              checked={rememberPassword ? true : false}
+              onClick={() => setRememberPassword(!rememberPassword)}
             />
             <label htmlFor="userAgreement">Remember me</label>
-            <a href="http://" rel="noopener noreferrer" className="forgotPswd">
-              Forgot your password?
-            </a>
           </div>
 
           <button

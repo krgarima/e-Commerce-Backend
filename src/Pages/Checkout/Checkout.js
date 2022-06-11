@@ -1,9 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../Context/cart-context";
+import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
 
 export default function Checkout() {
-  const { cart } = useContext(CartContext);
+  const navigate = useNavigate();
+  const { cart, dispatch, setOrderedProducts } = useContext(CartContext);
   const [showAddAddress, setShowAddAddress] = useState(false);
   const [addAddress, setAddAddress] = useState({
     name: "",
@@ -22,6 +24,7 @@ export default function Checkout() {
     state: "Haryana",
     country: "India",
     mobile: "9876543210",
+    email: "marryjoe@gmail.com",
     selectedAddress: true,
   });
   const [addressList, setAddressList] = useState([
@@ -33,6 +36,7 @@ export default function Checkout() {
       state: "Haryana",
       country: "India",
       mobile: "9876543210",
+      email: "marryjoe@gmail.com",
       selectedAddress: true,
     },
     {
@@ -43,9 +47,14 @@ export default function Checkout() {
       state: "aaaaa",
       country: "United Kingdom",
       mobile: "+44 20 7224 3688",
+      email: "homessherlock@yahoo.co.in",
       selectedAddress: false,
     },
   ]);
+
+  useEffect(() => {
+    document.title = "Checkout | Blackmole";
+  }, []);
 
   const totalPrice = cart
     .map((cartItem) => cartItem.price * cartItem.quantity)
@@ -78,35 +87,31 @@ export default function Checkout() {
       return;
     }
 
-    // Make API call to the serverless API
-    // const data = await fetch("/api/razorpay", { method: "POST" }).then((t) =>
-    //   t.json()
-    // );
-    // console.log(data);
     const options = {
-      key: "rzp_test_JTpMiaE4ZqOyY7", // Enter the Key ID generated from the Dashboard
+      key: "rzp_test_JTpMiaE4ZqOyY7",
       key_id: "rzp_test_JTpMiaE4ZqOyY7",
       key_secret: "dj5fTAWTojnXCzQSNlIKjnQm",
       name: "Blackmole Pvt Ltd",
       currency: "INR",
       amount: totalPrice * 100,
-      // order_id: "43434",
       description: "Thankyou for shopping with us",
-      // image: "/",
+
       handler: function (response) {
-        // Validate payment at server - using webhooks is a better idea.
-        console.log(response);
-        alert(
-          ` Your payment is done with order no: 
-          ${response.razorpay_payment_id}`
-        );
-        // alert(response.razorpay_order_id);
-        // alert(response.razorpay_signature);
+        setOrderedProducts({
+          paymentID: response.razorpay_payment_id,
+          paidProducts: cart,
+          name: selectedAddress.name,
+        });
+
+        dispatch({
+          type: "EMPTY-CART",
+        });
+        navigate("/Success");
       },
       prefill: {
-        name: "Marry Joe",
-        email: "marryjoe@gmail.com",
-        contact: "9999999999",
+        name: selectedAddress.name,
+        email: selectedAddress.email,
+        contact: selectedAddress.mobile,
       },
     };
 
@@ -291,6 +296,7 @@ export default function Checkout() {
                     state: "",
                     country: "",
                     mobile: "",
+                    email: "",
                   });
                 }}
               >
@@ -305,7 +311,8 @@ export default function Checkout() {
                   !addAddress.pincode ||
                   !addAddress.state ||
                   !addAddress.country ||
-                  !addAddress.mobile
+                  !addAddress.mobile ||
+                  !addAddress.email
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -318,6 +325,7 @@ export default function Checkout() {
                     state: "",
                     country: "",
                     mobile: "",
+                    email: "",
                   });
                   setShowAddAddress(false);
                 }}
@@ -337,6 +345,7 @@ export default function Checkout() {
                   state: "Maharashtra",
                   country: "India",
                   mobile: "9143435354",
+                  email: "mukuldesai@gmail.com",
                 });
               }}
             >

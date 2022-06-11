@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import BestSeller from "../../Components/BestSeller/BestSeller";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Home | Blackmole";
+  }, []);
+
   return (
     <div>
       <section className="main-content">
@@ -16,9 +20,10 @@ export default function Home() {
           <h1 className="company-Info first-heading">Create. Play. Learn.</h1>
           <div className="welcomeMsg">
             <h2 className="discount-para">upto 70% off</h2>
-            <button className="shopNow-btn">
-              <Link to="/ProductListing">Shop Now</Link>
-            </button>
+
+            <Link to="/ProductListing">
+              <button className="shopNow-btn">Shop Now</button>
+            </Link>
           </div>
         </div>
         <hr />

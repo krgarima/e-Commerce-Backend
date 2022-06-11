@@ -33,7 +33,7 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background-color: white;
+  background-color: var(--white-color);
   border-radius: 50%;
   padding: 8px 3.8rem 3px 8px;
 }

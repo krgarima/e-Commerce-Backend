@@ -1,0 +1,26 @@
+.order-Container p {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.order-successful {
+  color: var(--green-color);
+}
+
+.order-successful {
+  margin: 1rem 0;
+}
+
+.fa-check-circle {
+  color: var(--green-color);
+  margin: 0 1rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-msg {
+  color: var(--red-color);
+}

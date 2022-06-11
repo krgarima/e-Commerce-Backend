@@ -1,0 +1,78 @@
+.profile-Container {
+  margin-top: 8.5vh;
+  min-height: 82vh;
+  width: 98.6vw;
+  font-size: 1.3rem;
+}
+
+.profile-Container h1 {
+  margin: 1rem 0;
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.user-profile {
+  height: 68vh;
+  width: 27vw;
+  border: 5px solid var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.1rem;
+  padding: 5px 2rem;
+  background-color: var(--white-color);
+}
+
+.user-profile label {
+  font-weight: 600;
+}
+
+.user-profile input {
+  background-color: var(--white-color);
+  font-size: 1rem;
+  padding: 5px 10px;
+  color: var(--black-color);
+}
+
+.user-profile button {
+  padding: 8px 1.8rem;
+  margin: 8px 0rem;
+  cursor: pointer;
+  background-color: var(--purple-color);
+  color: var(--white-color);
+  font-size: 1.1rem;
+}
+
+.user-profile button {
+  font-weight: 700;
+}
+
+.user-profile button:hover {
+  box-shadow: 2px 2px 2px var(--gray-color);
+}
+
+@media only screen and (max-width: 700px) {
+  .user-profile {
+    height: 68vh;
+    width: 60vw;
+  }
+  .user-profile button {
+    padding: 5px 2rem;
+    margin: 8px 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .user-profile {
+    height: 75vh;
+    width: 65vw;
+  }
+  .user-profile input {
+    font-size: 10px;
+  }
+  .user-profile button {
+    padding: 5px 2rem;
+    margin: 8px 1rem;
+  }
+}
