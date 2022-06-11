@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../Context/cart-context";
 import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
@@ -51,6 +51,10 @@ export default function Checkout() {
       selectedAddress: false,
     },
   ]);
+
+  useEffect(() => {
+    document.title = "Checkout | Blackmole";
+  }, []);
 
   const totalPrice = cart
     .map((cartItem) => cartItem.price * cartItem.quantity)

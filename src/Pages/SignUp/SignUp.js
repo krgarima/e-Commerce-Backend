@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import "./SignUp.css";
 
@@ -10,44 +12,65 @@ export default function SignUp() {
     email: "",
     password: "",
     newPassword: "",
+    checked: false,
   });
 
-  const [disable, setDisable] = useState(true);
-  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
-  const signupHandler = async () => {
+  useEffect(() => {
+    document.title = "Sign up | Blackmole";
+  }, []);
+
+  const notify = (msg) =>
+    toast.error(msg, {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+
+  const signupHandler = async (event) => {
+    event.preventDefault();
+    console.log("xjh");
     if (
       !userData.firstName ||
       !userData.lastName ||
       !userData.email ||
       !userData.password ||
       !userData.newPassword ||
-      userData.password !== userData.newPassword ||
-      !userData.email.includes("@")
+      !userData.checked
     ) {
-      setError(true);
+      notify("Please fill out all the fields!");
       return;
-    }
-
-    try {
-      const response = await axios.post(`/api/auth/signup`, {
-        firstName: userData.firstName,
-        lastName: userData.lastName,
-        email: userData.email,
-        password: userData.password,
-      });
-      localStorage.setItem("token", response.data.encodedToken);
-      setUserData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        newPassword: "",
-      });
-      navigate("/");
-    } catch (error) {
-      alert(error);
+    } else if (!userData.email.includes("@", ".")) {
+      notify("Please fill in a valid email address!");
+      return;
+    } else if (userData.password !== userData.newPassword) {
+      notify("Passwords don't match!");
+      return;
+    } else {
+      try {
+        const response = await axios.post(`/api/auth/signup`, {
+          firstName: userData.firstName,
+          lastName: userData.lastName,
+          email: userData.email,
+          password: userData.password,
+        });
+        localStorage.setItem("token", response.data.encodedToken);
+        setUserData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          password: "",
+          newPassword: "",
+        });
+        navigate("/");
+      } catch (error) {
+        notify("Please refresh. Something went wrong!");
+      }
     }
   };
 
@@ -66,7 +89,6 @@ export default function SignUp() {
             placeholder="Enter your First Name"
             value={userData.firstName}
             onChange={(event) => {
-              setError(false);
               setUserData({ ...userData, firstName: event.target.value });
             }}
           />
@@ -81,7 +103,6 @@ export default function SignUp() {
             placeholder="Enter your Last Name"
             value={userData.lastName}
             onChange={(event) => {
-              setError(false);
               setUserData({ ...userData, lastName: event.target.value });
             }}
           />
@@ -96,7 +117,6 @@ export default function SignUp() {
             placeholder="johndoe@gmail.com"
             value={userData.email}
             onChange={(event) => {
-              setError(false);
               setUserData({ ...userData, email: event.target.value });
             }}
           />
@@ -111,7 +131,6 @@ export default function SignUp() {
             placeholder="Enter a new password"
             value={userData.password}
             onChange={(event) => {
-              setError(false);
               setUserData({ ...userData, password: event.target.value });
             }}
           />
@@ -126,7 +145,6 @@ export default function SignUp() {
             placeholder="Re-type your password"
             value={userData.newPassword}
             onChange={(event) => {
-              setError(false);
               setUserData({ ...userData, newPassword: event.target.value });
             }}
           />
@@ -137,7 +155,10 @@ export default function SignUp() {
               name="userAgreement"
               className="userAgreement"
               id="userAgreement"
-              onClick={() => setDisable(!disable)}
+              checked={userData.checked}
+              onChange={() =>
+                setUserData({ ...userData, checked: !userData.checked })
+              }
             />
             <label htmlFor="userAgreement">
               I accept all Terms & Conditions
@@ -146,11 +167,7 @@ export default function SignUp() {
           <br />
           <button
             className="signup-btns createNewAccount-btn"
-            disabled={disable}
-            onClick={(event) => {
-              event.preventDefault();
-              signupHandler();
-            }}
+            onClick={signupHandler}
           >
             Create my New Account
           </button>
@@ -158,9 +175,19 @@ export default function SignUp() {
           <button className="signup-btns toLoginPage-btn">
             <Link to="/Login">Already have an account &gt;</Link>
           </button>
-          {error && <div className="error-auth">Invalid input !</div>}
         </div>
       </form>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Profile.css";
 
@@ -18,6 +17,10 @@ export default function Profile() {
 
   useEffect(() => {
     if (localStorage.getItem("token") === null) navigate("/login");
+  }, []);
+
+  useEffect(() => {
+    document.title = "My Profile | Blackmole";
   }, []);
 
   const handleSubmit = (e) => {

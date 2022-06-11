@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CartCard from "../../Components/CartCard/CartCard";
 import { CartContext } from "../../Context/cart-context";
@@ -13,6 +13,10 @@ export default function Cart() {
   const totalQty = cart
     .map((cartItem) => cartItem.quantity)
     .reduce((acc, value) => acc + value, 0);
+
+  useEffect(() => {
+    document.title = "My Cart | Blackmole";
+  }, []);
 
   return (
     <div className="cart">

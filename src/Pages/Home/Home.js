@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import BestSeller from "../../Components/BestSeller/BestSeller";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Home | Blackmole";
+  }, []);
+
   return (
     <div>
       <section className="main-content">

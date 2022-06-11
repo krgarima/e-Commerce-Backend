@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useState } from "react";
+import React, { useContext, useReducer, useState, useEffect } from "react";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { ProductContext } from "../../Context/product-context";
 import { reducer } from "../../Reducer/filter-reducer";
@@ -9,6 +9,10 @@ export default function ProductListing() {
   const [state, dispatch] = useReducer(reducer, { filterData: [] });
   const [isInRange, setIsInRange] = useState(0);
   const [showFilter, setShowFilter] = useState(false);
+
+  useEffect(() => {
+    document.title = "All products | Blackmole";
+  }, []);
 
   return (
     <div>

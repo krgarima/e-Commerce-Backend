@@ -1,8 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/auth-context";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 
 export default function Login() {
@@ -15,15 +17,36 @@ export default function Login() {
     rememberPassword,
     setRememberPassword,
   } = useContext(AuthContext);
-  const [error, setError] = useState(false);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Login | Blackmole";
+  }, []);
+
+  const notify = (msg) =>
+    toast.error(msg, {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
 
   const handleLogin = async (e) => {
     e.preventDefault();
     if (!userName || !password) {
-      setError(true);
+      notify("Missing fields");
       return;
+    } else if (
+      userName !== "marryjoe@gmail.com" ||
+      password !== "marryjoe12345"
+    ) {
+      notify("Incorrect username or password!");
     }
+
     try {
       const response = await axios.post(`/api/auth/login`, {
         email: userName,
@@ -35,17 +58,17 @@ export default function Login() {
         setUserName("");
         setPassword("");
       }
+      navigate(-1);
     } catch (error) {
-      console.log(error);
+      notify("Please refresh. Something went wrong!");
+      // console.log(error);
     }
-    navigate(-1);
   };
 
   const setDummyData = async (e) => {
     e.preventDefault();
     setUserName("marryjoe@gmail.com");
     setPassword("marryjoe12345");
-    setError(false);
   };
 
   return (
@@ -63,7 +86,6 @@ export default function Login() {
             placeholder="Enter username"
             value={userName}
             onChange={(e) => {
-              setError(false);
               setUserName(e.target.value);
             }}
           />
@@ -78,7 +100,6 @@ export default function Login() {
             placeholder="Enter password"
             value={password}
             onChange={(e) => {
-              setError(false);
               setPassword(e.target.value);
             }}
           />
@@ -89,7 +110,8 @@ export default function Login() {
               name="userAgreement"
               className="userAgreement"
               id="userAgreement"
-              checked={rememberPassword ? "true" : ""}
+              readOnly
+              checked={rememberPassword ? true : false}
               onClick={() => setRememberPassword(!rememberPassword)}
             />
             <label htmlFor="userAgreement">Remember me</label>
@@ -108,9 +130,19 @@ export default function Login() {
           <button className="signup-btns toSignUpPage-btn">
             <Link to="/SignUp">Create a New Account &gt;</Link>
           </button>
-          {error && <div className="error-auth">Invalid input !</div>}
         </form>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

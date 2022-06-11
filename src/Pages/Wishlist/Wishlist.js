@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import WishlistCard from "../../Components/WishlistCard/WishlistCard";
-import "./Wishlist.css";
 import { WishlistContext } from "../../Context/wishlist-context";
+import "./Wishlist.css";
 
 export default function Wishlist() {
   const { wishlist } = useContext(WishlistContext);
+
+  useEffect(() => {
+    document.title = "My Wishlist | Blackmole";
+  }, []);
+
   return (
     <div>
       <div className="allWishlistProducts">
