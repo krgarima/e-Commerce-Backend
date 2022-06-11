@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
-import "./ProductDetails.css";
 import products from "../../backend/db/products";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { CartContext, WishlistContext } from "../../Context";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import "./ProductDetails.css";
 
 export default function ProductDetails() {
   const productList = products.products;
@@ -117,17 +116,6 @@ export default function ProductDetails() {
           </table>
         </aside>
       </div>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </div>
   );
 }

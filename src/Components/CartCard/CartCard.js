@@ -109,18 +109,6 @@ export default function CartCard() {
         );
       })}
 
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-
       {cart.length === 0 && (
         <iframe
           className="empty-gif"

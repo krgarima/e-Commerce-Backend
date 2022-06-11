@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext, WishlistContext } from "../../Context/index";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import "./WishlistCard.css";
 
 export default function WishlistCard() {
@@ -75,17 +74,6 @@ export default function WishlistCard() {
         );
       })}
 
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       {wishlist.length === 0 && (
         <iframe
           className="empty-gif"

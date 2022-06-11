@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { CartContext, WishlistContext } from "../../Context/index";
 import { AuthContext } from "../../Context/auth-context";
 import { useNavigate, Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import "./ProductCard.css";
 
 export default function ProductCard({ products }) {
@@ -97,17 +96,6 @@ export default function ProductCard({ products }) {
       ) : (
         <i className="fas fa-spinner fa-6x fa-spin"></i>
       )}
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </div>
   );
 }
