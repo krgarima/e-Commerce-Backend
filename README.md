@@ -74,6 +74,19 @@ a. Filters
 ### 9. Loading & Alerts/Toasts
 - User is notified when he adds/removes items
 
+### 10. Payment Integration
+- Used RazorPay for Payement Integration. User can make payment via netbanking, UPI etc.
+
+### 11. Order Confirmation page
+- Order confirmation page with Order ID displayed to user after payment done
+
+### 12. Address Management
+- User can choose address or add a new address
+
+### 13. Profile
+- User can see their profile or make any changes to their profile.
+
+
 ## Tech Stack
 
 - ReactJS (useState, useContext, useEffect, useReducer Hooks, React router)
