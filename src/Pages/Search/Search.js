@@ -13,8 +13,10 @@ export default function Search() {
     e.preventDefault();
     const newList = products.filter((product) => {
       if (
-        product.title.toLowerCase().includes(e.target.value) ||
-        product.categoryName.toLowerCase().includes(e.target.value)
+        product.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        product.categoryName
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase())
       ) {
         return product;
       }
